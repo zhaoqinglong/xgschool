@@ -1,0 +1,20 @@
+﻿#parse("Admin/Head.htm")
+<form method="post" action="gwySysSettings.ashx">
+<table align="center" class="table table-striped table-bordered">
+    <thead>
+        <tr ><th style=" width:200px;">相关栏目</th><th>内容</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>新革公务员公告:</td><td><textarea class="form-control" rows="3" name="xggwy" >$Data.xggwy</textarea></td></tr>
+        <tr><td>公考招录公告:</td><td><textarea class="form-control" rows="3" name="gkzl" >$Data.gkzl</textarea></td></tr>     
+        <tr><td>考试大纲:</td><td><textarea class="form-control" rows="3" name="ksdg" >$Data.ksdg</textarea></td></tr>
+        <tr><td>面试专区:</td><td><textarea class="form-control" rows="3" name="mszq" >$Data.mszq</textarea></td></tr>
+        <tr><td>行测专区:</td><td><textarea class="form-control" rows="3" name="xczq" >$Data.xczq</textarea></td></tr>
+        <tr><td>申论专区:</td><td><textarea class="form-control" rows="3" name="slzq" >$Data.slzq</textarea></td></tr>
+        <tr><td>公共基础知识:</td><td><textarea class="form-control" rows="3" name="ggjc" >$Data.ggjc</textarea></td></tr>
+        <tr><td>银行考试:</td><td><textarea class="form-control" rows="3" name="bank" >$Data.bank</textarea></td></tr>
+        <tr><td colspan="2"><input type="submit" name="Save" value="保存" class="btn btn-success"/></td></tr>
+    </tbody>
+</table>
+</form>
+#parse("Admin/Foot.htm")

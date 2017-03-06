@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>网站管理后台</title>
+    <link href="Css/default.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="js/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="js/themes/icon.css" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src='js/index.js'> </script>
+
+    <script type="text/javascript">
+
+        var _menus = {
+            "menus": [{
+                "menuid": "1",
+                "icon": "icon-sys",
+                "menuname": "新革公务员",
+                "menus": [
+                //首页开始
+                		{
+                		"menuid": "10",
+                		"menuname": "新革公务员首页",
+                		"icon": "icon-users",
+                		"url": "#",
+                		"child": [
+                        {
+                		    "menuid": "100",
+                		    "menuname": "顶部切换图片",
+                		    "icon": "icon-role",
+                		    "url": "indexImgEdit.ashx?Action=Show&colsBelong=新革教育首页&pagesBelong=图片轮播"
+                        }
+                    //    ,
+                    //       "menuid": "101",
+                    //       "menuname": "新革师资图片",
+                    //       "icon": "icon-role",
+                    //       "url": "indexImgEdit.ashx?Action=Show&colsBelong=新革教育首页&pagesBelong=新革师资"
+                    //    }
+                    //    ,{
+                    //"menuid": "102",
+                    //"menuname": "内容设置",
+                    //"icon": "icon-role",
+                    //"url": "gwySysSettings.ashx"
+                    //}
+                		]
+              },
+                //end
+		{
+		    "menuid": "13",
+		    "menuname": "主页栏目",
+		    "icon": "icon-users",
+		    "url": "#",
+		    "child": [{
+		        "menuid": "131",
+		        "menuname": "中心介绍",
+		        "icon": "icon-role",
+		        "url": "schoolColsEdit.ashx?Id=1&Action=Edit"
+		    },
+               {
+                   "menuid": "131",
+                   "menuname": "办学优势",
+                   "icon": "icon-role",
+                   "url": "schoolColsEdit.ashx?Id=3&Action=Edit"
+               }
+                , {
+                    "menuid": "132",
+                    "menuname": "开设课程",
+                    "icon": "icon-role",
+                    "url": "schoolColsEdit.ashx?Id=2&Action=Edit"
+                },
+                {
+                    "menuid": "133",
+                    "menuname": "试题专区",
+                    "icon": "icon-role",
+                    "url": "gwynewsList.ashx?newsBelong=试题专区"
+                },
+                {
+                    "menuid": "134",
+                    "menuname": "公考招录公告",
+                    "icon": "icon-role",
+                    "url": "gwynewsList.ashx?newsBelong=公考招录公告"
+                },
+                {
+                    "menuid": "135",
+                    "menuname": "新革公务员公告",
+                    "icon": "icon-role",
+                    "url": "gwynewsList.ashx?newsBelong=新革公务员公告"
+                }]
+		},
+		{
+		    "menuid": "14",
+		    "menuname": "公务员培训",
+		    "icon": "icon-role",
+		    "url": "demo2.html",
+		    "child": [{
+		        "menuid": "142",
+		        "menuname": "行测专区",
+		        "icon": "icon-role",
+		        "url": "trainEdit.ashx?trainId=2&Action=Edit"
+		    },
+			{
+			    "menuid": "152",
+			    "menuname": "申论专区",
+			    "icon": "icon-set",
+			    "url": "trainEdit.ashx?trainId=3&Action=Edit"
+			},
+			{
+			    "menuid": "162",
+			    "menuname": "面试专区",
+			    "icon": "icon-set",
+			    "url": "trainEdit.ashx?trainId=1&Action=Edit"
+			},
+			{
+			    "menuid": "172",
+			    "menuname": "银行考试",
+			    "icon": "icon-set",
+			    "url": "trainEdit.ashx?trainId=4&Action=Edit"
+			},
+			{
+			    "menuid": "182",
+			    "menuname": "公共基础",
+			    "icon": "icon-set",
+			    "url": "trainEdit.ashx?trainId=5&Action=Edit"
+			},
+			{
+			    "menuid": "192",
+			    "menuname": "考试大纲",
+			    "icon": "icon-set",
+			    "url": "trainEdit.ashx?trainId=24&Action=Edit"
+			}]
+		},
+		{
+		    "menuid": "15",
+		    "menuname": "新革师资",
+		    "icon": "icon-users",
+		    "url": "#",
+		    "child": [{
+		        "menuid": "131",
+		        "menuname": "添加",
+		        "icon": "icon-role",
+		        "url": "teacherEdit.ashx?Action=AddNew"
+		    }
+                , {
+                    "menuid": "132",
+                    "menuname": "修改",
+                    "icon": "icon-role",
+                    "url": "teacherEdit.ashx?Action=Show"
+                }]
+            }
+]
+            },
+{
+    "menuid": "8",
+    "icon": "icon-sys",
+    "menuname": "新革艺术学校",
+    "menus": [{
+        "menuid": "20",
+        "menuname": "新革艺术学校首页",
+        "icon": "icon-nav",
+        "url": "demo.html",
+        "child": [{
+            "menuid": "211",
+            "menuname": "首页顶部轮播图片",
+            "icon": "icon-nav",
+            "url": "indexImgEdit.ashx?Action=Show&colsBelong=艺术考试&pagesBelong=首页"
+        },
+        			{
+        			    "menuid": "212",
+        			    "menuname": "首页内容相关",
+        			    "icon": "icon-nav",
+        			    "url": "artSysSettings.ashx"
+
+        			},
+                    {
+                        "menuid": "212",
+                        "menuname": "首页新革动态栏目",
+                        "icon": "icon-nav",
+                        "url": "newsList.ashx?newsBelong=新革艺术学校"
+
+                    },
+			{
+			"menuid": "213",
+			"menuname": "优秀教师图片",
+			"icon": "icon-nav",
+			"url": "indexImgEdit.ashx?Action=Show&colsBelong=艺术考试&pagesBelong=首页优秀教师"
+
+
+            },
+            {
+                "menuid": "214",
+                "menuname": "教学成果图片",
+                "icon": "icon-nav",
+                "url": "indexImgEdit.ashx?Action=Show&colsBelong=艺术考试&pagesBelong=首页教学成果",
+
+
+            }]
+        }
+
+        //首页结束位置
+    ,{
+        "menuid": "21",
+        "menuname": "栏目列表",
+        "icon": "icon-nav",
+        "url": "demo.html",
+        "child": [{
+            "menuid": "211",
+            "menuname": "新革是谁",
+            "icon": "icon-nav",
+            "url": "schoolColsEdit.ashx?Id=13&Action=Edit"
+            },
+			{
+			    "menuid": "213",
+			    "menuname": "校园文化",
+			    "icon": "icon-nav",
+			    "url": "schoolColsEdit.ashx?Id=7&Action=Edit"
+
+			}, 
+            {
+			    "menuid": "214",
+			    "menuname": "联系我们",
+			    "icon": "icon-nav",
+			    "url": "schoolColsEdit.ashx?Id=8&Action=Edit"
+
+			}]
+        },
+		{
+		    "menuid": "22",
+		    "menuname": "新革优势",
+		    "icon": "icon-nav",
+		    "url": "demo1.html",
+		    "child": [{
+		        "menuid": "221",
+		        "menuname": "教学环境",
+		        "icon": "icon-nav",
+		        "url": "trainEdit.ashx?trainId=14&Action=Edit"
+		    },
+			{
+			    "menuid": "222",
+			    "menuname": "师资力量",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=15&Action=Edit"
+			},
+			{
+			    "menuid": "223",
+			    "menuname": "课堂氛围",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=16&Action=Edit"
+			}]
+},
+		{
+		    "menuid": "23",
+		    "menuname": "专业课程",
+		    "icon": "icon-nav",
+		    "url": "demo1.html",
+		    "child": [{
+		        "menuid": "231",
+		        "menuname": "编导类",
+		        "icon": "icon-nav",
+		        "url": "trainEdit.ashx?trainId=17&Action=Edit"
+		    },
+			{
+			    "menuid": "232",
+			    "menuname": "播音类",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=18&Action=Edit"
+			},
+			{
+			    "menuid": "233",
+			    "menuname": "表演类",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=19&Action=Edit"
+			},
+			{
+			    "menuid": "234",
+			    "menuname": "美术类",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=20&Action=Edit"
+			}
+            ,
+			{
+			    "menuid": "234",
+			    "menuname": "声乐类",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=21&Action=Edit"
+			}
+            ,
+			{
+			    "menuid": "234",
+			    "menuname": "舞蹈类",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=22&Action=Edit"
+			}
+            ,
+			{
+			    "menuid": "234",
+			    "menuname": "空乘类",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=23&Action=Edit"
+			}]
+		}]
+}, //2
+
+{
+"menuid": "8",
+"icon": "icon-sys",
+"menuname": "新革商演培训",
+"menus": [
+{
+    "menuid": "21",
+    "menuname": "栏目列表",
+    "icon": "icon-nav",
+    "url": "#",
+    "child": [{
+        "menuid": "211",
+        "menuname": "学员风采",
+        "icon": "icon-nav",
+        "url": "schoolColsEdit.ashx?Id=10&Action=Edit"
+            },
+			{
+			    "menuid": "212",
+			    "menuname": "课堂瞬间",
+			    "icon": "icon-nav",
+			    "url": "imgEdit.ashx?Action=Show&colsBelong=新革商演培训&pagesBelong=课堂瞬间"
+
+			},
+            {
+			    "menuid": "212",
+			    "menuname": "新革动态",
+			    "icon": "icon-nav",
+			    "url": "newsList.ashx?newsBelong=新革商演培训"
+
+			}]
+},
+		{
+		    "menuid": "22",
+		    "menuname": "商演培训",
+		    "icon": "icon-nav",
+		    "url": "#",
+		    "child": [{
+		        "menuid": "221",
+		        "menuname": "学院简介",
+		        "icon": "icon-nav",
+		        "url": "trainEdit.ashx?trainId=10&Action=Edit"
+		    },
+			{
+			    "menuid": "222",
+			    "menuname": "教学环境",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=11&Action=Edit"
+			},
+			{
+			    "menuid": "223",
+			    "menuname": "师资力量",
+			    "icon": "icon-nav",
+			    "url": "teacherEdit.ashx?Action=Show&teacherBelongTo=新革商演培训"
+			},
+			{
+			    "menuid": "224",
+			    "menuname": "课程设置",
+			    "icon": "icon-nav",
+			    "url": "trainEdit.ashx?trainId=13&Action=Edit"
+			}]
+
+},
+		{
+		    "menuid": "22",
+		    "menuname": "新革商演培训首页",
+		    "icon": "icon-nav",
+		    "url": "#",
+		    "child": [{
+		        "menuid": "221",
+		        "menuname": "首页顶部图片",
+		        "icon": "icon-nav",
+		        "url": "indexImgEdit.ashx?Action=Show&colsBelong=商演培训首页&pagesBelong=商演培训顶部"
+		    },
+			{
+			    "menuid": "222",
+			    "menuname": "学员风采图片",
+			    "icon": "icon-nav",
+			    "url": "indexImgEdit.ashx?Action=Show&colsBelong=商演培训首页&pagesBelong=学员风采图片"
+			},
+			{
+			    "menuid": "223",
+			    "menuname": "师资力量图片",
+			    "icon": "icon-nav",
+			    "url": "indexImgEdit.ashx?Action=Show&colsBelong=商演培训首页&pagesBelong=师资力量图片"
+			},
+			{
+			    "menuid": "224",
+			    "menuname": "其它设置",
+			    "icon": "icon-nav",
+			    "url": "showSysSettings.ashx"
+			}]
+
+		}
+
+]
+}
+//3
+, {
+    "menuid": "8",
+    "icon": "icon-sys",
+    "menuname": "网站设置",
+    "menus": [
+    {
+        "menuid": "12",
+        "menuname": "友情链接",
+        "icon": "icon-add",
+        "url": "#",
+        "child": [{
+            "menuid": "140",
+            "menuname": "添加友情链接",
+            "icon": "icon-role",
+            "url": "LinkEdit.ashx?Action=AddNew"
+        },
+			{
+			    "menuid": "150",
+			    "menuname": "编辑友情链接",
+			    "icon": "icon-set",
+			    "url": "LinkList.ashx"
+			}]
+    },
+    
+		{
+		    "menuid": "16",
+		    "menuname": "网站设置",
+		    "icon": "icon-set",
+		    "url": "demo.html",
+		    "child": [{
+		        "menuid": "160",
+		        "menuname": "网站设置",
+		        "icon": "icon-role",
+		        "url": "sysSettings.ashx"
+		    }
+            ,{
+		        "menuid": "161",
+		        "menuname": "首页图片",
+		        "icon": "icon-role",
+		        "url": "indexImgEdit.ashx?Action=Show&colsBelong=网站首页&pagesBelong=网站首页"
+		    }
+            ]
+		}
+
+		
+		
+		]}
+
+
+//
+
+]
+        };
+
+        //设置登录窗口
+        function openPwd() {
+            $('#w').window({
+                title: '修改密码',
+                width: 300,
+                modal: true,
+                shadow: true,
+                closed: true,
+                height: 160,
+                resizable:false
+            });
+        }
+        //关闭登录窗口
+        function closePwd() {
+            $('#w').window('close');
+        }
+
+        
+
+        //修改密码
+        function serverLogin() {
+            var $newpass = $('#txtNewPass');
+            var $rePass = $('#txtRePass');
+
+            if ($newpass.val() == '') {
+                msgShow('系统提示', '请输入密码！', 'warning');
+                return false;
+            }
+            if ($rePass.val() == '') {
+                msgShow('系统提示', '请在一次输入密码！', 'warning');
+                return false;
+            }
+
+            if ($newpass.val() != $rePass.val()) {
+                msgShow('系统提示', '两次密码不一至！请重新输入', 'warning');
+                return false;
+            }
+
+            $.post('editPassword.ashx?newpass=' + $newpass.val(), function(msg) {
+                msgShow('系统提示', msg, 'info');
+                $newpass.val('');
+                $rePass.val('');
+             //   close();
+            })
+            
+        }
+
+        $(function() {
+
+            openPwd();
+
+            $('#editpass').click(function() {
+                $('#w').window('open');
+            });
+
+            $('#btnEp').click(function() {
+                serverLogin();
+            })
+
+			$('#btnCancel').click(function(){closePwd();})
+
+            $('#loginOut').click(function() {
+                $.messager.confirm('系统提示', '您确定要退出本次登录吗?', function(r) {
+
+                    if (r) {
+                        location.href = 'logout.ashx';
+                    }
+                });
+            })
+        });
+
+
+    </script>
+
+</head>
+<body class="easyui-layout" style="overflow-y: hidden"  fit="true"   scroll="no">
+<noscript>
+<div style=" position:absolute; z-index:100000; height:2046px;top:0px;left:0px; width:100%; background:white; text-align:center;">
+    <img src="images/noscript.gif" alt='抱歉，请开启脚本支持！' />
+</div></noscript>
+
+<div id="loading-mask" style="position:absolute;top:0px; left:0px; width:100%; height:100%; background:#D2E0F2; z-index:20000">
+<div id="pageloading" style="position:absolute; top:50%; left:50%; margin:-120px 0px 0px -120px; text-align:center;  border:2px solid #8DB2E3; width:200px; height:40px;  font-size:14px;padding:10px; font-weight:bold; background:#fff; color:#15428B;"> 
+    <img src="images/loading.gif" align="middle" /> 正在加载中,请稍候...</div>
+</div>
+
+    <div region="north" split="true" border="false" style="overflow: hidden; height: 40px;
+        background: url(images/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
+        line-height:35px;color: #fff; font-family: Verdana, 微软雅黑,黑体">
+        <span style="float:right; padding-right:20px;" class="head">欢迎 <span id="user">管理员</span> <a href="#" id="editpass">修改密码</a> <a href="#" id="loginOut">安全退出</a></span>
+        <span style="padding-left:10px; font-size: 16px; "><img src="images/blocks.gif" width="20" height="20" align="middle" /> 新革教育网站后台管理系统</span>
+    </div>
+    <div region="south" split="true" style="height: 30px; background: #D2E0F2; ">
+        <div class="footer">By 新革教育©2010-2014</div>
+    </div>
+    <div region="west" split="true"  title="导航菜单" style="width:180px;" id="west">
+			<div id="nav">
+		<!--  导航内容 -->
+				
+			</div>
+
+    </div>
+    <div id="mainPanle" region="center" style="background: #eee; overflow-y:hidden">
+        <div id="tabs" class="easyui-tabs"  fit="true" border="false" >
+			<div title="欢迎使用" style="padding:250px;overflow:hidden; font-size:26px; padding-left:35%; " >
+				欢迎使用新革教育后台管理系统
+			</div>
+		</div>
+    </div>
+    
+    
+    <!--修改密码窗口-->
+    <div id="w" class="easyui-window" title="修改密码" collapsible="false" minimizable="false"
+        maximizable="false" icon="icon-save"  style="width: 300px; height: 150px; padding: 5px;
+        background: #fafafa;">
+        <div class="easyui-layout" fit="true">
+            <div region="center" border="false" style="padding: 10px; background: #fff; border: 1px solid #ccc;">
+                <table cellpadding=3>
+                    <tr>
+                        <td>新密码：</td>
+                        <td><input id="txtNewPass" type="Password" class="txt01" /></td>
+                    </tr>
+                    <tr>
+                        <td>确认密码：</td>
+                        <td><input id="txtRePass" type="Password" class="txt01" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div region="south" border="false" style="text-align: right; height: 30px; line-height: 30px;">
+                <a id="btnEp" class="easyui-linkbutton" icon="icon-ok" href="javascript:void(0)" >
+                    确定</a> <a id="btnCancel" class="easyui-linkbutton" icon="icon-cancel" href="javascript:void(0)">取消</a>
+            </div>
+        </div>
+    </div>
+
+	<div id="mm" class="easyui-menu" style="width:150px;">
+		<div id="tabupdate">刷新</div>
+		<div class="menu-sep"></div>
+		<div id="close">关闭</div>
+		<div id="closeall">全部关闭</div>
+		<div id="closeother">除此之外全部关闭</div>
+		<div class="menu-sep"></div>
+		<div id="closeright">当前页右侧全部关闭</div>
+		<div id="closeleft">当前页左侧全部关闭</div>
+		<div class="menu-sep"></div>
+		<div id="exit">退出</div>
+	</div>
+    <script type="text/javascript">
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        var o = document.getElementById("user");
+        o.innerHTML = getQueryString("userName") == null ? "管理员" : getQueryString("userName");
+    </script>
+
+</body>
+</html>

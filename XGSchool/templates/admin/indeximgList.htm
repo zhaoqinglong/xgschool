@@ -1,0 +1,33 @@
+﻿#parse ("admin/Head.htm")
+#if ($Data.colsBelong !="网站首页" && $Data.pagesBelong!="网站首页")
+<div style=" height:50px; margin-top:20px; margin-left:30px; font-size:16px;"><a href="imgEdit.ashx?Action=AddNew&colsBelong=$Data.colsBelong&pagesBelong=$Data.pagesBelong">添加</a></div>
+#end
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr><td>编辑</td>
+            #if ($Data.colsBelong !="网站首页" && $Data.pagesBelong!="网站首页")
+        <td>删除</td>
+            #end
+        <td>图片编号</td><!--<td>图片路径</td>--><td>图片预览</td><td>所在模块</td><td>所在页面</td><td>图片描述</td></tr>
+    </thead>
+    <tbody>
+    #foreach($p in $Data.Imgs)
+        <tr>
+            <td><a href="../Admin/indeximgEdit.ashx?Action=Edit&imgId=$p.imgId">编辑</a></td>
+            #if ($Data.colsBelong !="网站首页" && $Data.pagesBelong!="网站首页")
+            <td><a href="../Admin/indeximgEdit.ashx?Action=Delete&imgId=$p.imgId" onclick="javascript:if(confirm('确定要删除此信息吗？')){return true;}return false;">删除</a></td>
+            #end
+            <td>$p.imgId </td>
+            <!--<td>$p.imgSrc </td>-->
+            <td><img src="$p.imgSrc"  width="80" height="80" alt="预览"/></td>
+            <td>$p.colsBelong </td>
+            <td>$p.pagesBelong </td>  
+            <td>$p.imgDescription </td>
+        </tr>
+        #end
+    </tbody>
+
+</table>
+
+
+#parse("admin/foot.htm")

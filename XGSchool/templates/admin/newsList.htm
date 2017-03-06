@@ -1,0 +1,52 @@
+﻿#parse ("admin/Head.htm")
+
+<div style=" height:30px; padding-left:50px; font-size:15px; line-height:30px;"><a href="../Admin/newsEdit.ashx?Action=AddNew&newsBelong=$Data.newsBelong">新增新闻资讯</a></div>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr><td>编辑</td><td>删除</td><td>新闻标题</td><td>新闻作者</td><td>是否置顶</td></tr>
+    </thead>
+    <tbody>
+    #foreach($p in $Data.news)
+        <tr>
+            <td><a href="../Admin/newsEdit.ashx?Action=Edit&newsID=$p.newsID">编辑</a></td>
+            <td><a href="../Admin/newsEdit.ashx?Action=Delete&newsID=$p.newsID" onclick="javascript:if(confirm('确定要删除此信息吗？')){return true;}return false;">删除</a></td>
+            <td>$p.title</td>
+            <td>$p.author</td>
+            <td>
+                #if($p.pagesBelong=="是")
+                <span style="color:#0094ff;">已置顶</span>
+                    #else
+                    未置顶
+                    #end
+           </td>
+        </tr>
+        #end
+    </tbody>
+<tr>
+<td colspan="5">
+<div class="page_list">
+            <div class="list_info">共$Data.totalCount条/$Data.currentPageNum页 
+            <span class="disabled"><a href="?pageNum=1&newsBelong=$Data.newsBelong">&nbsp;&lt;&lt;&nbsp;</a></span>
+              #if($Data.currentPageNum>1)
+                #set($frontPage = $Data.currentPageNum - 1)
+                <span class="disabled"><a href="?pageNum=$frontPage&newsBelong=$Data.newsBelong">&nbsp;&lt;&nbsp;</a></span>
+              #end
+            #foreach($page in $Data.PageData)
+                #if($Data.currentPageNum==$page.newPageNum)
+                <span class="current">$page.newPageNum</span>
+                #else
+                <a href="?pageNum=$page.newPageNum&newsBelong=$Data.newsBelong">$page.newPageNum</a>
+                #end
+            #end
+            #if($Data.currentPageNum < $Data.totalPageNum)
+           	 	#set($nextPage=$Data.currentPageNum+1)
+            	<a href="?pageNum=$nextPage&newsBelong=$Data.newsBelong">&nbsp;&gt;&nbsp;</a>
+            #end
+            <a href="?pageNum=$Data.totalPageNum&newsBelong=$Data.newsBelong">&nbsp;&gt;&gt;&nbsp;</a>
+            </div>
+        </div>
+        
+</td>
+</tr>
+</table>
+#parse("admin/foot.htm")

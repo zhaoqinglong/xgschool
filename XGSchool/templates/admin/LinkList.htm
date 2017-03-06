@@ -1,0 +1,20 @@
+﻿#parse ("admin/Head.htm")
+
+<!--<div><a href="../Admin/LinkEdit.ashx?Action=AddNew">新增友情链接</a></div>-->
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr><td>编辑</td><td>删除</td><td>网站名称</td><td>网站地址</td></tr>
+    </thead>
+    <tbody>
+    #foreach($p in $Data.Linkherfs)
+        <tr>
+            <td><a href="../Admin/LinkEdit.ashx?Action=Edit&LinkId=$p.LinkId">编辑</a></td>
+            <td><a href="../Admin/LinkEdit.ashx?Action=Delete&LinkId=$p.LinkId" onclick="return confirm('确定删除该记录吗?')">删除</a></td>
+            <td>$p.LinkName </td>
+            <td>$p.LinkString </td>
+        </tr>
+        #end
+    </tbody>
+
+</table>
+#parse("admin/foot.htm")

@@ -1,0 +1,1368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52FE6101-96E7-4F84-84A0-23E4EE71A9EC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XGSchool</RootNamespace>
+    <AssemblyName>XGSchool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKFinder, Version=2.4.1.2663, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Skins\ckfinder\bin\Release\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NVelocity">
+      <HintPath>..\..\网站\YCFoodWeb\YCFoodWeb\Bin\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\css\default.css" />
+    <Content Include="Admin\images\arrow.gif" />
+    <Content Include="Admin\images\blocks.gif" />
+    <Content Include="Admin\images\CategorizeMenu.png" />
+    <Content Include="Admin\images\directory.png" />
+    <Content Include="Admin\images\layout-browser-hd-bg.gif" />
+    <Content Include="Admin\images\loading.gif" />
+    <Content Include="Admin\images\nav_link.png" />
+    <Content Include="Admin\images\noscript.gif" />
+    <Content Include="Admin\images\plugin_big.gif" />
+    <Content Include="Admin\images\ShowCustomPropertiesPage.png" />
+    <Content Include="Admin\images\tabicons.png" />
+    <Content Include="Admin\images\TableDrawTable.png" />
+    <Content Include="Admin\images\tools-sprites-trans.gif" />
+    <Content Include="Admin\index.html" />
+    <Content Include="Admin\js\easyloader.js" />
+    <Content Include="Admin\js\index.js" />
+    <Content Include="Admin\js\jquery-1.7.2.min.js" />
+    <Content Include="Admin\js\jquery.easyui.min.js" />
+    <Content Include="Admin\js\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Admin\js\plugins\jquery.accordion.js" />
+    <Content Include="Admin\js\plugins\jquery.calendar.js" />
+    <Content Include="Admin\js\plugins\jquery.combo.js" />
+    <Content Include="Admin\js\plugins\jquery.combobox.js" />
+    <Content Include="Admin\js\plugins\jquery.combogrid.js" />
+    <Content Include="Admin\js\plugins\jquery.combotree.js" />
+    <Content Include="Admin\js\plugins\jquery.datagrid.js" />
+    <Content Include="Admin\js\plugins\jquery.datebox.js" />
+    <Content Include="Admin\js\plugins\jquery.datetimebox.js" />
+    <Content Include="Admin\js\plugins\jquery.dialog.js" />
+    <Content Include="Admin\js\plugins\jquery.draggable.js" />
+    <Content Include="Admin\js\plugins\jquery.droppable.js" />
+    <Content Include="Admin\js\plugins\jquery.form.js" />
+    <Content Include="Admin\js\plugins\jquery.layout.js" />
+    <Content Include="Admin\js\plugins\jquery.linkbutton.js" />
+    <Content Include="Admin\js\plugins\jquery.menu.js" />
+    <Content Include="Admin\js\plugins\jquery.menubutton.js" />
+    <Content Include="Admin\js\plugins\jquery.messager.js" />
+    <Content Include="Admin\js\plugins\jquery.numberbox.js" />
+    <Content Include="Admin\js\plugins\jquery.numberspinner.js" />
+    <Content Include="Admin\js\plugins\jquery.pagination.js" />
+    <Content Include="Admin\js\plugins\jquery.panel.js" />
+    <Content Include="Admin\js\plugins\jquery.parser.js" />
+    <Content Include="Admin\js\plugins\jquery.progressbar.js" />
+    <Content Include="Admin\js\plugins\jquery.propertygrid.js" />
+    <Content Include="Admin\js\plugins\jquery.resizable.js" />
+    <Content Include="Admin\js\plugins\jquery.searchbox.js" />
+    <Content Include="Admin\js\plugins\jquery.slider.js" />
+    <Content Include="Admin\js\plugins\jquery.spinner.js" />
+    <Content Include="Admin\js\plugins\jquery.splitbutton.js" />
+    <Content Include="Admin\js\plugins\jquery.tabs.js" />
+    <Content Include="Admin\js\plugins\jquery.timespinner.js" />
+    <Content Include="Admin\js\plugins\jquery.tree.js" />
+    <Content Include="Admin\js\plugins\jquery.treegrid.js" />
+    <Content Include="Admin\js\plugins\jquery.validatebox.js" />
+    <Content Include="Admin\js\plugins\jquery.window.js" />
+    <Content Include="Admin\js\themes\default\accordion.css" />
+    <Content Include="Admin\js\themes\default\calendar.css" />
+    <Content Include="Admin\js\themes\default\combo.css" />
+    <Content Include="Admin\js\themes\default\combobox.css" />
+    <Content Include="Admin\js\themes\default\datagrid.css" />
+    <Content Include="Admin\js\themes\default\datebox.css" />
+    <Content Include="Admin\js\themes\default\dialog.css" />
+    <Content Include="Admin\js\themes\default\easyui.css" />
+    <Content Include="Admin\js\themes\default\images\accordion_collapse.png" />
+    <Content Include="Admin\js\themes\default\images\accordion_expand.png" />
+    <Content Include="Admin\js\themes\default\images\blank.gif" />
+    <Content Include="Admin\js\themes\default\images\button_a_bg.gif" />
+    <Content Include="Admin\js\themes\default\images\button_plain_hover.png" />
+    <Content Include="Admin\js\themes\default\images\button_span_bg.gif" />
+    <Content Include="Admin\js\themes\default\images\calendar_nextmonth.gif" />
+    <Content Include="Admin\js\themes\default\images\calendar_nextyear.gif" />
+    <Content Include="Admin\js\themes\default\images\calendar_prevmonth.gif" />
+    <Content Include="Admin\js\themes\default\images\calendar_prevyear.gif" />
+    <Content Include="Admin\js\themes\default\images\combo_arrow.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_row_collapse.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_row_expand.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="Admin\js\themes\default\images\datebox_arrow.png" />
+    <Content Include="Admin\js\themes\default\images\layout_button_down.gif" />
+    <Content Include="Admin\js\themes\default\images\layout_button_left.gif" />
+    <Content Include="Admin\js\themes\default\images\layout_button_right.gif" />
+    <Content Include="Admin\js\themes\default\images\layout_button_up.gif" />
+    <Content Include="Admin\js\themes\default\images\menu.gif" />
+    <Content Include="Admin\js\themes\default\images\menu_downarrow.png" />
+    <Content Include="Admin\js\themes\default\images\menu_rightarrow.png" />
+    <Content Include="Admin\js\themes\default\images\menu_sep.png" />
+    <Content Include="Admin\js\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="Admin\js\themes\default\images\messager_error.gif" />
+    <Content Include="Admin\js\themes\default\images\messager_info.gif" />
+    <Content Include="Admin\js\themes\default\images\messager_question.gif" />
+    <Content Include="Admin\js\themes\default\images\messager_warning.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_first.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_last.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_load.png" />
+    <Content Include="Admin\js\themes\default\images\pagination_loading.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_next.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_prev.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_loading.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_title.png" />
+    <Content Include="Admin\js\themes\default\images\panel_tools.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_tool_collapse.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_tool_expand.gif" />
+    <Content Include="Admin\js\themes\default\images\searchbox_button.png" />
+    <Content Include="Admin\js\themes\default\images\slider_handle.png" />
+    <Content Include="Admin\js\themes\default\images\spinner_arrow_down.gif" />
+    <Content Include="Admin\js\themes\default\images\spinner_arrow_up.gif" />
+    <Content Include="Admin\js\themes\default\images\tabs_active.png" />
+    <Content Include="Admin\js\themes\default\images\tabs_close.gif" />
+    <Content Include="Admin\js\themes\default\images\tabs_enabled.png" />
+    <Content Include="Admin\js\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="Admin\js\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="Admin\js\themes\default\images\tree_arrows.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_checkbox_0.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_checkbox_1.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_checkbox_2.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_dnd_no.png" />
+    <Content Include="Admin\js\themes\default\images\tree_dnd_yes.png" />
+    <Content Include="Admin\js\themes\default\images\tree_elbow.png" />
+    <Content Include="Admin\js\themes\default\images\tree_file.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_folder.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_folder_open.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_loading.gif" />
+    <Content Include="Admin\js\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="Admin\js\themes\default\images\validatebox_warning.png" />
+    <Content Include="Admin\js\themes\default\layout.css" />
+    <Content Include="Admin\js\themes\default\linkbutton.css" />
+    <Content Include="Admin\js\themes\default\menu.css" />
+    <Content Include="Admin\js\themes\default\menubutton.css" />
+    <Content Include="Admin\js\themes\default\messager.css" />
+    <Content Include="Admin\js\themes\default\pagination.css" />
+    <Content Include="Admin\js\themes\default\panel.css" />
+    <Content Include="Admin\js\themes\default\progressbar.css" />
+    <Content Include="Admin\js\themes\default\propertygrid.css" />
+    <Content Include="Admin\js\themes\default\searchbox.css" />
+    <Content Include="Admin\js\themes\default\slider.css" />
+    <Content Include="Admin\js\themes\default\spinner.css" />
+    <Content Include="Admin\js\themes\default\splitbutton.css" />
+    <Content Include="Admin\js\themes\default\tabs.css" />
+    <Content Include="Admin\js\themes\default\tree.css" />
+    <Content Include="Admin\js\themes\default\validatebox.css" />
+    <Content Include="Admin\js\themes\default\window.css" />
+    <Content Include="Admin\js\themes\gray\accordion.css" />
+    <Content Include="Admin\js\themes\gray\calendar.css" />
+    <Content Include="Admin\js\themes\gray\combo.css" />
+    <Content Include="Admin\js\themes\gray\combobox.css" />
+    <Content Include="Admin\js\themes\gray\datagrid.css" />
+    <Content Include="Admin\js\themes\gray\datebox.css" />
+    <Content Include="Admin\js\themes\gray\dialog.css" />
+    <Content Include="Admin\js\themes\gray\easyui.css" />
+    <Content Include="Admin\js\themes\gray\images\accordion_collapse.png" />
+    <Content Include="Admin\js\themes\gray\images\accordion_expand.png" />
+    <Content Include="Admin\js\themes\gray\images\blank.gif" />
+    <Content Include="Admin\js\themes\gray\images\button_a_bg.gif" />
+    <Content Include="Admin\js\themes\gray\images\button_plain_hover.png" />
+    <Content Include="Admin\js\themes\gray\images\button_span_bg.gif" />
+    <Content Include="Admin\js\themes\gray\images\calendar_nextmonth.gif" />
+    <Content Include="Admin\js\themes\gray\images\calendar_nextyear.gif" />
+    <Content Include="Admin\js\themes\gray\images\calendar_prevmonth.gif" />
+    <Content Include="Admin\js\themes\gray\images\calendar_prevyear.gif" />
+    <Content Include="Admin\js\themes\gray\images\combo_arrow.gif" />
+    <Content Include="Admin\js\themes\gray\images\datagrid_header_bg.gif" />
+    <Content Include="Admin\js\themes\gray\images\datagrid_row_collapse.gif" />
+    <Content Include="Admin\js\themes\gray\images\datagrid_row_expand.gif" />
+    <Content Include="Admin\js\themes\gray\images\datagrid_sort_asc.gif" />
+    <Content Include="Admin\js\themes\gray\images\datagrid_sort_desc.gif" />
+    <Content Include="Admin\js\themes\gray\images\datagrid_title_bg.gif" />
+    <Content Include="Admin\js\themes\gray\images\datebox_arrow.png" />
+    <Content Include="Admin\js\themes\gray\images\layout_button_down.gif" />
+    <Content Include="Admin\js\themes\gray\images\layout_button_left.gif" />
+    <Content Include="Admin\js\themes\gray\images\layout_button_right.gif" />
+    <Content Include="Admin\js\themes\gray\images\layout_button_up.gif" />
+    <Content Include="Admin\js\themes\gray\images\menu.gif" />
+    <Content Include="Admin\js\themes\gray\images\menu_downarrow.png" />
+    <Content Include="Admin\js\themes\gray\images\menu_rightarrow.png" />
+    <Content Include="Admin\js\themes\gray\images\menu_sep.png" />
+    <Content Include="Admin\js\themes\gray\images\menu_split_downarrow.png" />
+    <Content Include="Admin\js\themes\gray\images\messager_error.gif" />
+    <Content Include="Admin\js\themes\gray\images\messager_info.gif" />
+    <Content Include="Admin\js\themes\gray\images\messager_question.gif" />
+    <Content Include="Admin\js\themes\gray\images\messager_warning.gif" />
+    <Content Include="Admin\js\themes\gray\images\pagination_first.gif" />
+    <Content Include="Admin\js\themes\gray\images\pagination_last.gif" />
+    <Content Include="Admin\js\themes\gray\images\pagination_load.png" />
+    <Content Include="Admin\js\themes\gray\images\pagination_loading.gif" />
+    <Content Include="Admin\js\themes\gray\images\pagination_next.gif" />
+    <Content Include="Admin\js\themes\gray\images\pagination_prev.gif" />
+    <Content Include="Admin\js\themes\gray\images\panel_loading.gif" />
+    <Content Include="Admin\js\themes\gray\images\panel_title.gif" />
+    <Content Include="Admin\js\themes\gray\images\panel_tools.gif" />
+    <Content Include="Admin\js\themes\gray\images\panel_tool_collapse.gif" />
+    <Content Include="Admin\js\themes\gray\images\panel_tool_expand.gif" />
+    <Content Include="Admin\js\themes\gray\images\searchbox_button.png" />
+    <Content Include="Admin\js\themes\gray\images\slider_handle.png" />
+    <Content Include="Admin\js\themes\gray\images\spinner_arrow_down.gif" />
+    <Content Include="Admin\js\themes\gray\images\spinner_arrow_up.gif" />
+    <Content Include="Admin\js\themes\gray\images\tabs_close.gif" />
+    <Content Include="Admin\js\themes\gray\images\tabs_enabled.gif" />
+    <Content Include="Admin\js\themes\gray\images\tabs_leftarrow.png" />
+    <Content Include="Admin\js\themes\gray\images\tabs_rightarrow.png" />
+    <Content Include="Admin\js\themes\gray\images\tree_arrows.gif" />
+    <Content Include="Admin\js\themes\gray\images\tree_checkbox_0.gif" />
+    <Content Include="Admin\js\themes\gray\images\tree_checkbox_1.gif" />
+    <Content Include="Admin\js\themes\gray\images\tree_checkbox_2.gif" />
+    <Content Include="Admin\js\themes\gray\images\tree_dnd_no.png" />
+    <Content Include="Admin\js\themes\gray\images\tree_dnd_yes.png" />
+    <Content Include="Admin\js\themes\gray\images\tree_elbow.png" />
+    <Content Include="Admin\js\themes\gray\images\tree_file.gif" />
+    <Content Include="Admin\js\themes\gray\images\tree_folder.gif" />
+    <Content Include="Admin\js\themes\gray\images\tree_folder_open.gif" />
+    <Content Include="Admin\js\themes\gray\images\tree_loading.gif" />
+    <Content Include="Admin\js\themes\gray\images\validatebox_pointer.gif" />
+    <Content Include="Admin\js\themes\gray\images\validatebox_warning.png" />
+    <Content Include="Admin\js\themes\gray\layout.css" />
+    <Content Include="Admin\js\themes\gray\linkbutton.css" />
+    <Content Include="Admin\js\themes\gray\menu.css" />
+    <Content Include="Admin\js\themes\gray\menubutton.css" />
+    <Content Include="Admin\js\themes\gray\messager.css" />
+    <Content Include="Admin\js\themes\gray\pagination.css" />
+    <Content Include="Admin\js\themes\gray\panel.css" />
+    <Content Include="Admin\js\themes\gray\progressbar.css" />
+    <Content Include="Admin\js\themes\gray\propertygrid.css" />
+    <Content Include="Admin\js\themes\gray\searchbox.css" />
+    <Content Include="Admin\js\themes\gray\slider.css" />
+    <Content Include="Admin\js\themes\gray\spinner.css" />
+    <Content Include="Admin\js\themes\gray\splitbutton.css" />
+    <Content Include="Admin\js\themes\gray\tabs.css" />
+    <Content Include="Admin\js\themes\gray\tree.css" />
+    <Content Include="Admin\js\themes\gray\validatebox.css" />
+    <Content Include="Admin\js\themes\gray\window.css" />
+    <Content Include="Admin\js\themes\icon.css" />
+    <Content Include="Admin\js\themes\icons\back.png" />
+    <Content Include="Admin\js\themes\icons\blank.gif" />
+    <Content Include="Admin\js\themes\icons\cancel.png" />
+    <Content Include="Admin\js\themes\icons\cut.png" />
+    <Content Include="Admin\js\themes\icons\edit_add.png" />
+    <Content Include="Admin\js\themes\icons\edit_remove.png" />
+    <Content Include="Admin\js\themes\icons\filesave.png" />
+    <Content Include="Admin\js\themes\icons\help.png" />
+    <Content Include="Admin\js\themes\icons\mini_add.png" />
+    <Content Include="Admin\js\themes\icons\mini_edit.png" />
+    <Content Include="Admin\js\themes\icons\mini_refresh.png" />
+    <Content Include="Admin\js\themes\icons\no.png" />
+    <Content Include="Admin\js\themes\icons\ok.png" />
+    <Content Include="Admin\js\themes\icons\pencil.png" />
+    <Content Include="Admin\js\themes\icons\print.png" />
+    <Content Include="Admin\js\themes\icons\redo.png" />
+    <Content Include="Admin\js\themes\icons\reload.png" />
+    <Content Include="Admin\js\themes\icons\search.png" />
+    <Content Include="Admin\js\themes\icons\sum.png" />
+    <Content Include="Admin\js\themes\icons\tip.png" />
+    <Content Include="Admin\js\themes\icons\undo.png" />
+    <Content Include="artSchoolNew\about.aspx" />
+    <Content Include="artSchoolNew\advantages.aspx" />
+    <Content Include="artSchoolNew\contact.aspx" />
+    <Content Include="artSchoolNew\culture.aspx" />
+    <Content Include="artSchoolNew\index.aspx" />
+    <Content Include="artSchoolNew\lesson.aspx" />
+    <Content Include="artSchoolNew\news.aspx" />
+    <Content Include="artSchoolNew\newsDetail.aspx" />
+    <Content Include="artSchoolNew\teachers.aspx" />
+    <Content Include="bin\NVelocity.dll" />
+    <Content Include="commercial\classes.aspx" />
+    <Content Include="commercial\commercialNews.aspx" />
+    <Content Include="commercial\commercialShow.aspx" />
+    <Content Include="commercial\newsDetail.aspx" />
+    <Content Include="commercial\showClasses.aspx" />
+    <Content Include="commercial\showIndex.aspx" />
+    <Content Include="commercial\student.aspx" />
+    <Content Include="commercial\teachEnvironment.aspx" />
+    <Content Include="commercial\teacherPower.aspx" />
+    <Content Include="commercial\xgabout.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="Skins\artimages\a3.jpg" />
+    <Content Include="Skins\artimages\a4.jpg" />
+    <Content Include="Skins\artimages\a5.jpg" />
+    <Content Include="Skins\artimages\arrow_left.png" />
+    <Content Include="Skins\artimages\arrow_left_click.png" />
+    <Content Include="Skins\artimages\arrow_left_focus.png" />
+    <Content Include="Skins\artimages\arrow_right.png" />
+    <Content Include="Skins\artimages\arrow_right_click.png" />
+    <Content Include="Skins\artimages\arrow_right_focus.png" />
+    <Content Include="Skins\artimages\banner_01.png" />
+    <Content Include="Skins\artimages\bg_banner.png" />
+    <Content Include="Skins\artimages\bg_banner1.png" />
+    <Content Include="Skins\artimages\book.png" />
+    <Content Include="Skins\artimages\class_001.png" />
+    <Content Include="Skins\artimages\class_002.png" />
+    <Content Include="Skins\artimages\class_003.png" />
+    <Content Include="Skins\artimages\class_004.png" />
+    <Content Include="Skins\artimages\class_01.png" />
+    <Content Include="Skins\artimages\class_02.png" />
+    <Content Include="Skins\artimages\class_03.png" />
+    <Content Include="Skins\artimages\class_04.png" />
+    <Content Include="Skins\artimages\column_01.png" />
+    <Content Include="Skins\artimages\column_02.png" />
+    <Content Include="Skins\artimages\column_03.png" />
+    <Content Include="Skins\artimages\column_04.png" />
+    <Content Include="Skins\artimages\column_05.png" />
+    <Content Include="Skins\artimages\column_06.png" />
+    <Content Include="Skins\artimages\image_tel.png" />
+    <Content Include="Skins\artimages\img1.jpg" />
+    <Content Include="Skins\artimages\img2.jpg" />
+    <Content Include="Skins\artimages\img3.jpg" />
+    <Content Include="Skins\artimages\img4.jpg" />
+    <Content Include="Skins\artimages\img5.jpg" />
+    <Content Include="Skins\artimages\img6.jpg" />
+    <Content Include="Skins\artimages\logoArt.png" />
+    <Content Include="Skins\artimages\more_01_click.png" />
+    <Content Include="Skins\artimages\more_01_focus.png" />
+    <Content Include="Skins\artimages\more_01_normal.png" />
+    <Content Include="Skins\artimages\more_03_click.png" />
+    <Content Include="Skins\artimages\more_03_focus.png" />
+    <Content Include="Skins\artimages\more_03_normal.png" />
+    <Content Include="Skins\artimages\nav_01.png" />
+    <Content Include="Skins\artimages\nav_01_current.png" />
+    <Content Include="Skins\artimages\nav_02.png" />
+    <Content Include="Skins\artimages\nav_02_current.png" />
+    <Content Include="Skins\artimages\nav_03.png" />
+    <Content Include="Skins\artimages\nav_03_current.png" />
+    <Content Include="Skins\artimages\nav_04.png" />
+    <Content Include="Skins\artimages\nav_04_current.png" />
+    <Content Include="Skins\artimages\nav_05.png" />
+    <Content Include="Skins\artimages\nav_05_current.png" />
+    <Content Include="Skins\artimages\nav_06.png" />
+    <Content Include="Skins\artimages\nav_06_current.png" />
+    <Content Include="Skins\artimages\nav_07.png" />
+    <Content Include="Skins\artimages\nav_07_current.png" />
+    <Content Include="Skins\artimages\school.png" />
+    <Content Include="Skins\artimages\tab_current.png" />
+    <Content Include="Skins\artimages\tab_focus.png" />
+    <Content Include="Skins\artimages\tab_normal.png" />
+    <Content Include="Skins\artimages\tea1.png" />
+    <Content Include="Skins\artimages\top.png" />
+    <Content Include="Skins\ckeditor\adapters\jquery.js" />
+    <Content Include="Skins\ckeditor\build-config.js" />
+    <Content Include="Skins\ckeditor\ckeditor.js" />
+    <Content Include="Skins\ckeditor\config.js" />
+    <Content Include="Skins\ckeditor\contents.css" />
+    <Content Include="Skins\ckeditor\lang\en.js" />
+    <Content Include="Skins\ckeditor\lang\zh-cn.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Skins\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Skins\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Skins\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Skins\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Skins\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Skins\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Skins\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Skins\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Skins\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Skins\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Skins\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Skins\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Skins\ckeditor\plugins\icons.png" />
+    <Content Include="Skins\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Skins\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Skins\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Skins\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Skins\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Skins\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Skins\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Skins\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Skins\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Skins\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Skins\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Skins\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Skins\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Skins\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Skins\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Skins\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Skins\ckeditor\plugins\preview\preview.html" />
+    <Content Include="Skins\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Skins\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Skins\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Skins\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Skins\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Skins\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Skins\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Skins\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="Skins\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Skins\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Skins\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Skins\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Skins\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Skins\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Skins\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Skins\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Skins\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Skins\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Skins\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Skins\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Skins\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Skins\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Skins\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Skins\ckeditor\skins\moono\editor.css" />
+    <Content Include="Skins\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Skins\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Skins\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Skins\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Skins\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Skins\ckeditor\skins\moono\icons.png" />
+    <Content Include="Skins\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Skins\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Skins\ckeditor\styles.js" />
+    <Content Include="Skins\ckfinder\bin\Debug\CKFinder.dll" />
+    <Content Include="Skins\ckfinder\bin\Debug\CKFinder.pdb" />
+    <Content Include="Skins\ckfinder\bin\Release\CKFinder.dll" />
+    <Content Include="Skins\ckfinder\ckfinder.html" />
+    <Content Include="Skins\ckfinder\ckfinder.js" />
+    <Content Include="Skins\ckfinder\ckfinder_v1.js" />
+    <Content Include="Skins\ckfinder\config.ascx" />
+    <Content Include="Skins\ckfinder\config.js" />
+    <Content Include="Skins\ckfinder\core\connector\aspx\connector.aspx" />
+    <Content Include="Skins\ckfinder\core\connector\aspx\lang\en.xml" />
+    <Content Include="Skins\ckfinder\core\connector\aspx\lang\zh-cn.xml" />
+    <Content Include="Skins\ckfinder\help\en\files\001.html" />
+    <Content Include="Skins\ckfinder\help\en\files\002.html" />
+    <Content Include="Skins\ckfinder\help\en\files\003.html" />
+    <Content Include="Skins\ckfinder\help\en\files\004.html" />
+    <Content Include="Skins\ckfinder\help\en\files\005.html" />
+    <Content Include="Skins\ckfinder\help\en\files\006.html" />
+    <Content Include="Skins\ckfinder\help\en\files\007.html" />
+    <Content Include="Skins\ckfinder\help\en\files\008.html" />
+    <Content Include="Skins\ckfinder\help\en\files\009.html" />
+    <Content Include="Skins\ckfinder\help\en\files\010.html" />
+    <Content Include="Skins\ckfinder\help\en\files\011.html" />
+    <Content Include="Skins\ckfinder\help\en\files\012.html" />
+    <Content Include="Skins\ckfinder\help\en\files\013.html" />
+    <Content Include="Skins\ckfinder\help\en\files\014.html" />
+    <Content Include="Skins\ckfinder\help\en\files\015.html" />
+    <Content Include="Skins\ckfinder\help\en\files\header.html" />
+    <Content Include="Skins\ckfinder\help\en\files\license.html" />
+    <Content Include="Skins\ckfinder\help\en\files\suggestions.html" />
+    <Content Include="Skins\ckfinder\help\en\files\toc.html" />
+    <Content Include="Skins\ckfinder\help\en\index.html" />
+    <Content Include="Skins\ckfinder\help\files\images\002.gif" />
+    <Content Include="Skins\ckfinder\help\files\images\003.gif" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_basket_clear.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_basket_drag.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_basket_empty.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_basket_file_menu.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_basket_remove.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_already_exists.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_copied.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_delete.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_display_01.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_display_02.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_display_03.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_display_04.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_drag_copy.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_drag_move.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_menu.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_moved.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_pane.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_rename.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_resize.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_resize_both.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_resize_new.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_resize_overwrite.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_resize_resized.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_resize_thumbnails.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_select_hovered.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_select_selected.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_select_unselected.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_view_list.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_file_view_thumbnails.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_collapse.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_copied_from_basket.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_delete.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_expand.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_loading.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_menu.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_moved_from_basket.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_new.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_pane.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_rename.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_folder_select.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_interface.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_menu_arrow.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_menu_arrows.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_resize_lock.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_resize_reset.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_resize_unlock.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_settings.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_status_empty.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_status_file.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_status_folder.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_toolbar.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_toolbar_help.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_toolbar_refresh.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_upload_01.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_upload_03.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_upload_04.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_upload_09.png" />
+    <Content Include="Skins\ckfinder\help\files\images\CKFinder_upload_10.png" />
+    <Content Include="Skins\ckfinder\help\files\other\help.css" />
+    <Content Include="Skins\ckfinder\help\files\other\help.js" />
+    <Content Include="Skins\ckfinder\lang\en.js" />
+    <Content Include="Skins\ckfinder\lang\zh-cn.js" />
+    <Content Include="Skins\ckfinder\plugins\dummy\lang\en.js" />
+    <Content Include="Skins\ckfinder\plugins\dummy\plugin.js" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\bin\Debug\CKFinder_FileEditor.dll" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\bin\Debug\CKFinder_FileEditor.pdb" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\bin\Release\CKFinder_FileEditor.dll" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\bin\Release\CKFinder_FileEditor.pdb" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\lib\codemirror.css" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\lib\codemirror.js" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\mode\clike\clike.js" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\mode\css\css.js" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\mode\javascript\javascript.js" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\mode\xml\xml.js" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\plugin.js" />
+    <Content Include="Skins\ckfinder\plugins\flashupload\flash\Uploader.swf" />
+    <Content Include="Skins\ckfinder\plugins\flashupload\Uploader.html" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\colorbox.css" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\border.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\controls.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomCenter.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomLeft.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomRight.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderMiddleLeft.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderMiddleRight.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopCenter.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopLeft.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopRight.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\loading.gif" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\loading_background.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\images\overlay.png" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\jquery.colorbox-min.js" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\jquery.min.js" />
+    <Content Include="Skins\ckfinder\plugins\gallery\colorbox\license.txt" />
+    <Content Include="Skins\ckfinder\plugins\imageresize\bin\Debug\CKFinder_ImageResize.dll" />
+    <Content Include="Skins\ckfinder\plugins\imageresize\bin\Debug\CKFinder_ImageResize.pdb" />
+    <Content Include="Skins\ckfinder\plugins\imageresize\bin\Release\CKFinder_ImageResize.dll" />
+    <Content Include="Skins\ckfinder\plugins\imageresize\bin\Release\CKFinder_ImageResize.pdb" />
+    <Content Include="Skins\ckfinder\plugins\imageresize\images\mini.gif" />
+    <Content Include="Skins\ckfinder\plugins\imageresize\plugin.js" />
+    <Content Include="Skins\ckfinder\plugins\watermark\bin\Debug\CKFinder_Watermark.dll" />
+    <Content Include="Skins\ckfinder\plugins\watermark\bin\Debug\CKFinder_Watermark.pdb" />
+    <Content Include="Skins\ckfinder\plugins\watermark\bin\Release\CKFinder_Watermark.dll" />
+    <Content Include="Skins\ckfinder\plugins\watermark\bin\Release\CKFinder_Watermark.pdb" />
+    <Content Include="Skins\ckfinder\plugins\watermark\logo.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\app.css" />
+    <Content Include="Skins\ckfinder\skins\kama\host.css" />
+    <Content Include="Skins\ckfinder\skins\kama\images\ckffolder.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\ckffolderopened.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\ckfminus.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\ckfnothumb.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\ckfplus.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons.png" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\ai.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\avi.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\bmp.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\cs.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\default.icon.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\dll.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\doc.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\docx.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\exe.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\fla.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\gif.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\jpg.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\js.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\mdb.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\mp3.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\ogg.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\pdf.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\ppt.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\pptx.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\rdp.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\swf.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\swt.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\txt.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\vsd.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\xls.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\xlsx.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\xml.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\16\zip.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\ai.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\avi.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\bmp.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\cs.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\default.icon.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\dll.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\doc.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\docx.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\exe.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\fla.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\gif.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\jpg.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\js.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\mdb.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\mp3.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\ogg.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\ogg.png" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\pdf.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\ppt.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\pptx.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\rdp.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\swf.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\swt.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\txt.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\vsd.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\xls.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\xlsx.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\xml.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\icons\32\zip.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\loaders\16x16.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\loaders\32x32.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\spacer.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\sprites.png" />
+    <Content Include="Skins\ckfinder\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\add.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\clear_basket.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\delete.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\download.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\help.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\maximize.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\refresh.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\settings.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\images\toolbar\view.gif" />
+    <Content Include="Skins\ckfinder\skins\kama\richcombo.css" />
+    <Content Include="Skins\ckfinder\skins\kama\skin.js" />
+    <Content Include="Skins\ckfinder\skins\kama\uipanel.css" />
+    <Content Include="Skins\ckfinder\skins\v1\app.css" />
+    <Content Include="Skins\ckfinder\skins\v1\host.css" />
+    <Content Include="Skins\ckfinder\skins\v1\images\ckffolder.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\ckffolderopened.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\ckfminus.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\ckfnothumb.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\ckfplus.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\dialog_sides.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\dialog_sides.png" />
+    <Content Include="Skins\ckfinder\skins\v1\images\dialog_sides_rtl.png" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons.png" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\ai.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\avi.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\bmp.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\cs.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\default.icon.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\dll.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\doc.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\docx.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\exe.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\fla.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\gif.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\jpg.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\js.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\mdb.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\mp3.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\pdf.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\ppt.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\pptx.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\rdp.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\swf.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\swt.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\txt.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\vsd.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\xls.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\xlsx.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\xml.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\16\zip.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\ai.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\avi.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\bmp.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\cs.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\default.icon.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\dll.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\doc.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\docx.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\exe.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\fla.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\gif.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\jpg.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\js.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\mdb.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\mp3.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\pdf.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\ppt.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\pptx.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\rdp.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\swf.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\swt.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\txt.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\vsd.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\xls.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\xlsx.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\xml.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\icons\32\zip.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\loaders\16x16.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\loaders\32x32.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\spacer.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\sprites.png" />
+    <Content Include="Skins\ckfinder\skins\v1\images\sprites_ie6.png" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\add.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\clear_basket.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\delete.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\download.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\help.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\maximize.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\refresh.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\settings.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar\view.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\images\toolbar_start.gif" />
+    <Content Include="Skins\ckfinder\skins\v1\richcombo.css" />
+    <Content Include="Skins\ckfinder\skins\v1\skin.js" />
+    <Content Include="Skins\ckfinder\skins\v1\uipanel.css" />
+    <Content Include="Skins\CSS\artStyle.css" />
+    <Content Include="Skins\CSS\bootstrap-ie6.min.css" />
+    <Content Include="Skins\CSS\bootstrap-ie7.css" />
+    <Content Include="Skins\CSS\bootstrap.min.css" />
+    <Content Include="Skins\CSS\camera.css" />
+    <Content Include="Skins\CSS\flexslider.css" />
+    <Content Include="Skins\CSS\flexslider1.css" />
+    <Content Include="Skins\CSS\ie.css" />
+    <Content Include="Skins\CSS\jcarousel.connected-carousels.css" />
+    <Content Include="Skins\CSS\signin.css" />
+    <Content Include="Skins\CSS\Style.css" />
+    <Content Include="Skins\images\03.gif" />
+    <Content Include="Skins\images\1.jpg" />
+    <Content Include="Skins\images\3.jpg" />
+    <Content Include="Skins\images\4.jpg" />
+    <Content Include="Skins\images\5.jpg" />
+    <Content Include="Skins\images\6.jpg" />
+    <Content Include="Skins\images\a3.jpg" />
+    <Content Include="Skins\images\a4.jpg" />
+    <Content Include="Skins\images\a5.jpg" />
+    <Content Include="Skins\images\ads.gif" />
+    <Content Include="Skins\images\bg1.gif" />
+    <Content Include="Skins\images\bg2.png" />
+    <Content Include="Skins\images\bg3.gif" />
+    <Content Include="Skins\images\bg_03.gif" />
+    <Content Include="Skins\images\bg_blue.png" />
+    <Content Include="Skins\images\bg_yellow.png" />
+    <Content Include="Skins\images\butt-left.gif" />
+    <Content Include="Skins\images\butt-right.gif" />
+    <Content Include="Skins\images\cir.png" />
+    <Content Include="Skins\images\contact.gif" />
+    <Content Include="Skins\images\ico.png" />
+    <Content Include="Skins\images\left.png" />
+    <Content Include="Skins\images\li.gif" />
+    <Content Include="Skins\images\LOGO.png" />
+    <Content Include="Skins\images\logo_new.png" />
+    <Content Include="Skins\images\pencil.gif" />
+    <Content Include="Skins\images\right.png" />
+    <Content Include="Skins\images\span.png" />
+    <Content Include="Skins\images\spriteimg.png" />
+    <Content Include="Skins\images\top.png" />
+    <Content Include="Skins\images\u53.png" />
+    <Content Include="Skins\images\u65.png" />
+    <Content Include="Skins\scripts\bootstrap-ie.js" />
+    <Content Include="Skins\scripts\bootstrap.min.js" />
+    <Content Include="Skins\scripts\bxCarousel.js" />
+    <Content Include="Skins\scripts\camera.min.js" />
+    <Content Include="Skins\scripts\html5shiv.min.js" />
+    <Content Include="Skins\scripts\jcarousel.connected-carousels.js" />
+    <Content Include="Skins\scripts\jquery-1.11.0.min.js" />
+    <Content Include="Skins\scripts\jquery.easing.1.3.js" />
+    <Content Include="Skins\scripts\jquery.flexslider.js" />
+    <Content Include="Skins\scripts\jquery.jcarousel.min.js" />
+    <Content Include="Skins\scripts\jquery.KinSlideshow-1.2.1.js" />
+    <Content Include="Skins\scripts\jquery.min.js" />
+    <Content Include="Skins\scripts\respond.min.js" />
+    <Content Include="templates\admin\Foot.htm" />
+    <Content Include="templates\admin\Head.htm" />
+    <Content Include="templates\admin\index.htm" />
+    <Content Include="templates\admin\LinkEdit.htm" />
+    <Content Include="templates\admin\LinkList.htm" />
+    <Content Include="templates\admin\gwynewsEdit.htm" />
+    <Content Include="templates\admin\newsEdit.htm" />
+    <Content Include="templates\admin\gwynewsList.htm" />
+    <Content Include="templates\admin\newsList.htm" />
+    <Content Include="templates\admin\sysSettings.htm" />
+    <Content Include="templates\admin\teacherEdit.htm" />
+    <Content Include="templates\admin\teacherList.htm" />
+    <Content Include="templates\admin\trainEdit.htm" />
+    <Content Include="templates\admin\schoolColsEdit.htm" />
+    <Content Include="templates\admin\imgList.htm" />
+    <Content Include="templates\admin\imgEdit.htm" />
+    <Content Include="templates\admin\indeximgEdit.htm" />
+    <Content Include="templates\admin\indeximgList.htm" />
+    <Content Include="templates\admin\artSysSettings.htm" />
+    <Content Include="templates\admin\showSysSettings.htm" />
+    <Content Include="templates\admin\gwySysSettings.htm" />
+    <Content Include="train\advantages.aspx" />
+    <Content Include="train\examinationDetails.aspx" />
+    <Content Include="train\examinationList.aspx" />
+    <Content Include="train\index.aspx" />
+    <Content Include="train\interview.aspx" />
+    <Content Include="train\teachers.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\editPassword.ashx.cs">
+      <DependentUpon>editPassword.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\gwynewsEdit.ashx.cs">
+      <DependentUpon>gwynewsEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\gwynewsList.ashx.cs">
+      <DependentUpon>gwynewsList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\imgEdit.ashx.cs">
+      <DependentUpon>imgEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\index.ashx.cs">
+      <DependentUpon>index.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\indexImgEdit.ashx.cs">
+      <DependentUpon>indexImgEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\linkEdit.ashx.cs">
+      <DependentUpon>linkEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\linkList.ashx.cs">
+      <DependentUpon>linkList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\newsEdit.ashx.cs">
+      <DependentUpon>newsEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\newsList.ashx.cs">
+      <DependentUpon>newsList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\schoolColsEdit.ashx.cs">
+      <DependentUpon>schoolColsEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\teacherEdit.ashx.cs">
+      <DependentUpon>teacherEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\trainEdit.ashx.cs">
+      <DependentUpon>trainEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\advantages.aspx.cs">
+      <DependentUpon>advantages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\advantages.aspx.designer.cs">
+      <DependentUpon>advantages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\artSchool.Master.cs">
+      <DependentUpon>artSchool.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\artSchool.Master.designer.cs">
+      <DependentUpon>artSchool.Master</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\culture.aspx.cs">
+      <DependentUpon>culture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\culture.aspx.designer.cs">
+      <DependentUpon>culture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\lesson.aspx.cs">
+      <DependentUpon>lesson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\lesson.aspx.designer.cs">
+      <DependentUpon>lesson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\newsDetail.aspx.cs">
+      <DependentUpon>newsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\newsDetail.aspx.designer.cs">
+      <DependentUpon>newsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artSchoolNew\teachers.aspx.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="artSchoolNew\teachers.aspx.designer.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\classes.aspx.cs">
+      <DependentUpon>classes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\classes.aspx.designer.cs">
+      <DependentUpon>classes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\commercialNews.aspx.cs">
+      <DependentUpon>commercialNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\commercialNews.aspx.designer.cs">
+      <DependentUpon>commercialNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\commercialShow.aspx.cs">
+      <DependentUpon>commercialShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\commercialShow.aspx.designer.cs">
+      <DependentUpon>commercialShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\newsDetail.aspx.cs">
+      <DependentUpon>newsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\newsDetail.aspx.designer.cs">
+      <DependentUpon>newsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\show.Master.cs">
+      <DependentUpon>show.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\show.Master.designer.cs">
+      <DependentUpon>show.Master</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\showClasses.aspx.cs">
+      <DependentUpon>showClasses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\showClasses.aspx.designer.cs">
+      <DependentUpon>showClasses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\showIndex.aspx.cs">
+      <DependentUpon>showIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\showIndex.aspx.designer.cs">
+      <DependentUpon>showIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\student.aspx.cs">
+      <DependentUpon>student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\student.aspx.designer.cs">
+      <DependentUpon>student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\teachEnvironment.aspx.cs">
+      <DependentUpon>teachEnvironment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\teachEnvironment.aspx.designer.cs">
+      <DependentUpon>teachEnvironment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\teacherPower.aspx.cs">
+      <DependentUpon>teacherPower.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\teacherPower.aspx.designer.cs">
+      <DependentUpon>teacherPower.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commercial\xgabout.aspx.cs">
+      <DependentUpon>xgabout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commercial\xgabout.aspx.designer.cs">
+      <DependentUpon>xgabout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBHelper\CommonHelper.cs" />
+    <Compile Include="DBHelper\SqlHelper.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="train\advantages.aspx.cs">
+      <DependentUpon>advantages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="train\advantages.aspx.designer.cs">
+      <DependentUpon>advantages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="train\examinationDetails.aspx.cs">
+      <DependentUpon>examinationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="train\examinationDetails.aspx.designer.cs">
+      <DependentUpon>examinationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="train\examinationList.aspx.cs">
+      <DependentUpon>examinationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="train\examinationList.aspx.designer.cs">
+      <DependentUpon>examinationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="train\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="train\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="train\interview.aspx.cs">
+      <DependentUpon>interview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="train\interview.aspx.designer.cs">
+      <DependentUpon>interview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="train\teachers.aspx.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="train\teachers.aspx.designer.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XGModels\Link.cs" />
+    <Compile Include="XGModels\Pic.cs" />
+    <Compile Include="XGModels\Teacher.cs" />
+    <Compile Include="XGModels\XGNews.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\index.ashx" />
+    <Content Include="Admin\editPassword.ashx" />
+    <Content Include="Admin\imgEdit.ashx" />
+    <Content Include="Admin\indexImgEdit.ashx" />
+    <Content Include="Admin\gwynewsList.ashx" />
+    <Content Include="Admin\gwynewsEdit.ashx" />
+    <None Include="Admin\js\themes\default\images\Thumbs.db" />
+    <None Include="Admin\js\themes\gray\images\Thumbs.db" />
+    <Content Include="Admin\trainEdit.ashx" />
+    <Content Include="Admin\linkList.ashx" />
+    <Content Include="Admin\linkEdit.ashx" />
+    <Content Include="Admin\schoolColsEdit.ashx" />
+    <Content Include="Admin\teacherEdit.ashx" />
+    <Content Include="commercial\show.Master" />
+    <Content Include="Admin\logout.ashx" />
+    <Content Include="Admin\sysSettings.ashx" />
+    <Content Include="artSchoolNew\artSchool.Master" />
+    <Content Include="Admin\artSysSettings.ashx" />
+    <Content Include="Admin\showSysSettings.ashx" />
+    <Content Include="Admin\gwySysSettings.ashx" />
+    <Content Include="Admin\newsEdit.ashx" />
+    <Content Include="Admin\newsList.ashx" />
+    <None Include="Properties\PublishProfiles\配置文件1.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Skins\ckeditor\LICENSE.md" />
+    <None Include="Skins\ckeditor\plugins\scayt\LICENSE.md" />
+    <None Include="Skins\ckeditor\plugins\scayt\README.md" />
+    <None Include="Skins\ckeditor\plugins\wsc\LICENSE.md" />
+    <None Include="Skins\ckeditor\plugins\wsc\README.md" />
+    <None Include="Skins\ckeditor\skins\moono\readme.md" />
+    <Content Include="Skins\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
+    <Content Include="Skins\ckfinder\userfiles\.htaccess" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Skins\uploadfiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6893</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

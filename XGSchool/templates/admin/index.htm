@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>用户登录</title>
+
+    <link href="../Skins/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../Skins/CSS/signin.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" action="../Admin/index.ashx" method="post">
+        <h2 class="form-signin-heading" style=" padding-left:28%;">用户登录</h2>
+        <input type="hidden" name="dopost" value="login" />
+        <input type="text" name="username"  class="form-control" placeholder="用户名" required autofocus>
+        <input type="password" name="userPwd"  class="form-control" placeholder="密码" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      </form>
+
+    </div>
+</body>
+</html>

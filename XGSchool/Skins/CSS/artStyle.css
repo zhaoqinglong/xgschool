@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html{ height:100%; }
+body{ margin:0; padding:0 auto; background-color:#fff; }
+body,a,strong,input,select,button,h1,h2,h3,h4,h5,h6,h7 {font: "Microsoft YaHei","SimSun","Arial","Tahoma",sans-serif; color:#434A54;}
+a { text-decoration:none;}
+.clear{clear:both;}
+.myfloat{ float:left;}
+img{ border:none;}
+li{ list-style:none; float:left;}
+.newBorder{ border:#666 solid 1px;}
+.top{ width:100%; height:6px; background:url(../artimages/top.png) repeat-x ; }
+.banner{ width:100%; height:100px; margin:0 auto; }
+.banner1{ width:50%; height:100px; background:url(../artimages/logoArt.png) no-repeat 45% 18px;}
+.banner2{ width:50%; height:100px; background:url(../artimages/image_tel.png) no-repeat 30% 31px;}
+.nav{ width:100%; height:100px; background:#0189D6;}
+.mynav{ width:1100px; margin:0 auto;}
+.nav ul{ list-style-type:none; margin:0; padding:0; overflow:hidden; }
+.nav ul li{ float:left; height:96px; }
+.nav ul li a{ float:left; height:96px; cursor:pointer;}
+
+
+.mynav ul li ul { position:absolute; margin-top:96px; display:none; z-index:10000;}
+.mynav ul li ul li { float:none; height:74px; }
+.mynav ul li ul li a { background:#ffff00; height:74px; width:153px; line-height:74px; text-align:center; font-size:20px; color:#16161C;}
+.mynav ul li ul li a:hover{ text-decoration:underline;}
+.mynav ul li:hover ul{ display:block; }
+.mynav ul li:visited ul{ display:block; }
+
+#nav1{ background:url(../artimages/nav_01.png) no-repeat; height:96px; min-width:155px;}
+#nav2{ background:url(../artimages/nav_02.png) no-repeat; height:96px; min-width:155px;}
+#nav3{ background:url(../artimages/nav_03.png) no-repeat; height:96px; min-width:155px;}
+#nav4{ background:url(../artimages/nav_04.png) no-repeat; height:96px; min-width:155px;}
+#nav5{ background:url(../artimages/nav_05.png) no-repeat; height:96px; min-width:155px;}
+#nav6{ background:url(../artimages/nav_06.png) no-repeat; height:96px; min-width:155px;}
+#nav7{ background:url(../artimages/nav_07.png) no-repeat; height:96px; min-width:155px;}
+#nav1:hover{ background:url(../artimages/nav_01_current.png) no-repeat;}
+#nav2:hover{ background:url(../artimages/nav_02_current.png) no-repeat;}
+#nav3:hover{ background:url(../artimages/nav_03_current.png) no-repeat;}
+#nav4:hover{ background:url(../artimages/nav_04_current.png) no-repeat;}
+#nav5:hover{ background:url(../artimages/nav_05_current.png) no-repeat;}
+#nav6:hover{ background:url(../artimages/nav_06_current.png) no-repeat;}
+#nav7:hover{ background:url(../artimages/nav_07_current.png) no-repeat;}
+
+.content1{width:100%; background:url(../artimages/bg_banner1.png) repeat-x; margin-top:16px; height:357px;}
+.content1-con{ width:1300px; background:url(../artimages/bg_banner.png) no-repeat; margin:0 auto; height:357px;}
+
+.content2{ width:100%; background:#fff5ee; min-height:500px; border-top:#E7AA5A solid 2px;}
+.content2-con1{ width:930px; margin:0 auto; height:500px; padding-top:30px;}
+
+.content2-con1-left-top{width:490px; background:url(../artimages/column_01.png) no-repeat 50% 0;  height:50px;}
+.content2-con1-left-middle{width:90px; background:url(../artimages/more_01_normal.png) no-repeat 50% 13px; height:50px; display:block; }
+.content2-con1-left-middle:hover{ background:url(../artimages/more_01_focus.png) no-repeat 50% 13px; }
+.content2-con1-left-right{width:140px; height:50px; margin-left:117px; background:url(../artimages/column_02.png) no-repeat;}
+
+.content2-con1-left{ width:570px; height:420px; border:solid 6px #b31a7a; background-color:#ffffff;}
+.content2-con1-left p{ padding:45px; padding-top:10px; font-size:15px; color:#b31a7a; line-height:25px;}
+.content2-con1-right{ width:230px; height:420px; margin-left:115px;}
+.content2-con1-right img{ border:solid 6px #fff500;}
+
+
+.content2-con2-title{ width:930px; margin:0 auto; margin-top:20px; margin-bottom:10px; height:90px;}
+.content2-con2-title-left{width:840px; height:90px; background:url(../artimages/column_03.png) no-repeat 50% 20px;}
+.content2-con2-title-right{ width:90px; height:90px; background:url(../artimages/more_01_normal.png) no-repeat 0 60px; display:block;}
+.content2-con2-title-right:hover{ background:url(../artimages/more_01_focus.png) no-repeat 0 60px; }
+
+.content2-con2{width:930px; margin:0 auto; height:auto; min-height:390px; padding-top:30px; padding-bottom:20px; background-color:#fff; border:solid 3px #007cc2;}
+.content2-con2-content{height:100px; margin-bottom:10px;}
+.content2-con2-img{float:left; border:solid 3px #f0efef; margin-top:13px; margin-left:120px;}
+.content2-con2-tit{font-size:19px; border-bottom:dashed 3px #b1b1b1; height:80px; width:600px; line-height:80px; text-align:left; float:left; margin-left:50px; overflow:hidden;}
+
+.content2-con3{ width:930px; height:520px;  margin:60px auto; border:solid 3px #cccccc;}
+.content2-con3-title{ width:930px; margin:0 auto;  margin-bottom:10px; height:90px; background-color:#fff500; border-bottom:solid 1px #ccc;}
+.content2-con3-title-left{width:794px; height:90px; background:url(../artimages/column_04.png) no-repeat 55% 10px;}
+.content2-con3-title-right{ width:130px; height:90px; background:url(../artimages/more_03_normal.png) no-repeat 0 30px; display:block;}
+.content2-con3-title-right:hover{  background:url(../artimages/more_03_click.png) no-repeat 0 30px; }
+
+.more{ display:inline-block; width:60px; height:20px; line-height:20px; text-align:center; font-size:15px; color:#FFF; background-color:#FF3266; margin-left:5px;}
+.more:hover{font-size:15px; color:#FFF;}
+
+.content2-con3-content1{margin:0 30px 0 30px; width:170px;}
+.content2-con3-content1-title{height:100px; width:170px; background:url(../artimages/class_01.png) no-repeat 35px 45px;}
+.content2-con3-content1-img img{border:solid 5px #cccccc; }
+.content2-con3-content1-c{font-size:15px; width:173px; color:#979492; letter-spacing:2px; margin-top:10px; line-height:23px;}
+
+.content2-con4{ width:930px; height:448px; margin:60px auto; background-color:#0188d4; border:solid 3px #0188d4;}
+.content2-con4-title{ width:924px; margin:0 auto;  height:90px;  }
+.content2-con4-title-left{width:794px; height:90px; background:url(../artimages/column_05.png) no-repeat 55% 10px;}
+
+.content2-con4-title-right{ width:130px; height:90px; background:url(../artimages/more_03_normal.png) no-repeat 0 30px; display:block;}
+.content2-con4-title-right:hover{  background:url(../artimages/more_03_click.png) no-repeat 0 30px; }
+
+.content2-con5{ width:930px; height:426px; margin:60px auto 0; background-color:#fffefe; border:solid 3px #c6c4c3;}
+.content2-con5-title{ width:930px; margin:0 auto;  height:90px; background-color:#ffff00;  border-bottom:solid 3px #c6c4c3; }
+.content2-con5-title-left{width:794px; height:90px; background:url(../artimages/column_06.png) no-repeat 55% 10px;}
+.content2-con5-title-right{ width:130px; height:90px; background:url(../artimages/more_03_normal.png) no-repeat 0 30px; display:block;}
+.content2-con5-title-right:hover{ background:url(../artimages/more_03_click.png) no-repeat 0 30px; }
+.content2-con6{  height:30px; }
+
+.content3{ background:#414141; height:125px; width:100%; }
+.content3-con{ width:930px; margin:0 auto;}
+.content3-con-left{color:#fff; font-size:16px; height:125px; width:650px;}
+.friendlink{ margin-top:30px; height:25px; line-height:25px;}
+.friendlink a{ display:inline-block; padding:0 10px; min-width:30px; color:#fff; font-size:16px;} 
+.content3-con-right{width:270px; color:#fff; font-size:16px; height:125px;}
+
+
+/**专业课程**/
+.lesson-content{ width:930px; margin:20px auto; height:auto; min-height:600px;}
+.lesson-content-title{ height:87px; background-color:#007CC3; width:100%; line-height:87px; text-align:center; color:#ffff00; font-size:30px; letter-spacing:2px;}
+.lesson-content-con{ height:auto; min-height:500px; border-bottom:8px solid #E8E8E8;  border-left:5px solid #E8E8E8;  border-right:5px solid #E8E8E8;  border-top:12px solid #E8E8E8; padding:20px;}
+
+/*导航位置栏*/
+.columns1{ height:15px; line-height:15px; width:922px; margin: auto; background-color:#E8E8E8; padding-left:8px; padding-top:8px; font-size:13px;}
+.myspan{ padding:0 10px;}
+.myspan a:hover {text-decoration:underline; }
+
+
+.course-contain-main{ width:100%; margin:20px auto; height:auto; min-height:440px;}
+.course-contain-left-train{ margin-left:10px; margin-right:20px; margin-bottom:30px; width:860px; height:300px; overflow:hidden;}
+    .clearfix{
+        clear:both;
+        content:'';
+    }
+.teacher-name-train{ color:#E0000B; font-size:17px; font-weight:bold; margin:0; margin-bottom:5px;  }
+.teacher-title-train{ font-size:15px; font-weight:bold; margin:0; margin-bottom:5px;}
+.teacher-details-train{ text-indent:2em; font-size:15px; line-height:30px; }

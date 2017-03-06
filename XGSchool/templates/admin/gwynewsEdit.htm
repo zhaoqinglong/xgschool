@@ -1,0 +1,142 @@
+﻿#parse ("admin/Head.htm")
+<!--<script type="text/javascript" src="../Skins/ckeditor/ckeditor.js"></script>-->
+<form action="../admin/gwynewsEdit.ashx" method="post" enctype="multipart/form-data" id="J-form-sub">
+    <input type="hidden" name="isPostBack" value="true" />
+    <input type="hidden" name="Action" value="$Data.Action" />
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>详细</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>编号</td>
+            <td><input type="text" name="newsID" value="$Data.News.newsID" readonly="readonly" class="form-control" /> </td>
+        </tr>
+        <tr>
+            <td>标题</td>
+            <td>
+                <input type="text" name="title" id="title" value="$Data.News.title" class="form-control validation myinline" />
+                <span class="lblMessage" style="color: Red;"></span>
+             </td>
+        </tr>
+        <tr>
+            <td>作者</td>
+            <td>
+                <input type="text" name="author" id="author" value="$Data.News.author" class="form-control validation myinline" /> 
+                <span class="lblMessage" style="color: Red;"></span>
+            </td>
+        </tr>
+        <!--<tr>
+            <td>摘要</td>
+            <td><textarea name="newsDescription" id="newsDescription" class="form-control" cols="3" rows="3">$Data.News.newsDescription</textarea> </td>
+        </tr>-->
+        <!--<tr>
+           <td>图片</td>
+            <td><input type="file" name="newsImage" />
+           #if( $Data.Action== "Edit")
+            <img src="$Data.News.newsImage"  alt="图像缩略图" width="120" height="120"/>
+           #end
+           </td>
+        </tr>-->
+        <tr>
+            <td>内容</td>
+            <td><textarea name="Msg" id="Msg" class="validation">$Data.News.newsContent</textarea> </td>
+        </tr>
+        <tr>
+            <td>所属板块</td>
+            <td>
+                #if( $Data.Action== "Edit")
+                <input type="text" name="newsBelong" value="$Data.News.newsBelong" readonly="readonly" class="form-control" />
+                #else
+                <!--<select name="newsBelong" class="form-control" style=" width:500px;">
+                    <option value="新革公务员公告">新革公务员公告</option>
+                    <option value="公考招录公告" selected="selected">公考招录公告</option>
+                    <option value="试题专区">试题专区</option>
+                </select>-->
+                <input type="text" name="newsBelong" value="$Data.news.newsBelong" readonly="readonly" class="form-control" />
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td>新闻置顶</td>
+            <td>
+                #if($Data.News.pagesBelong=="是")
+                <input type="radio" name="pagesBelong" value="是" checked="checked" />是
+                <input type="radio" name="pagesBelong" value="否" />否
+                #else
+                <input type="radio" name="pagesBelong" value="是" />是
+                <input type="radio" name="pagesBelong" value="否" checked="checked" />否
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="保存" class="btn btn-success J-btn-sub" />
+                <input type="button" value="返回" onclick="javascript:history.back();" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript">
+           var msg = document.getElementById("Msg");
+           var ckeditor = CKEDITOR.replace(msg);
+           CKFinder.setupCKEditor(ckeditor, '/Skins/ckfinder/');
+
+
+           var jQuery = jQuery.noConflict();
+
+           jQuery(".validation").blur(function () {
+               checkValueLegal(jQuery(this));
+           });
+
+           function checkValueLegal(obj) {
+               var success = true;
+               var id = obj.attr("id");
+               var val = jQuery.trim(obj.val());
+
+               obj.siblings(".lblMessage").html("");
+
+               if (id == "title" && jQuery("#title").val().length >= 30) {
+                   obj.siblings(".lblMessage").html("*长度需小于30个字符");
+                   success = false;
+               }
+
+               if (id == "title" && jQuery("#title").val().length <= 0) {
+                   obj.siblings(".lblMessage").html("*不能为空");
+                   success = false;
+               }
+
+               if (id == "author" && jQuery("#author").val().length >= 10) {
+                   obj.siblings(".lblMessage").html("*长度需小于10个字符");
+                   success = false;
+               }
+
+               if (id == "author" && jQuery("#author").val().length <= 0) {
+                   obj.siblings(".lblMessage").html("*不能为空");
+                   success = false;
+               }
+
+ 
+
+               return success;
+           }
+
+           jQuery(".J-btn-sub").click(function () {
+               var count = 0;
+               jQuery(".validation").each(function (i) {
+                   if (!checkValueLegal(jQuery(this))) {
+                       count++;
+                   }
+               });
+
+               if (count > 0) {
+                   return false;
+               }
+               jQuery("#J-form-sub").submit();
+           });
+</script>
+
+#parse("admin/Foot.htm")

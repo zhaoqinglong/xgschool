@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+html{ height:101%; }
+body{ margin:0; padding:0 auto; background-color:#FFF; }
+body,a,strong,input,select,button,h1,h2,h3,h4,h5,h6,h7 {font:13px "Microsoft YaHei","SimSun","Arial","Tahoma",sans-serif; color:#434A54;}
+a { text-decoration:none;}
+.clear{clear:both;}
+.myfloat{ float:left;}
+img{ border:none;}
+li{ list-style:none; float:left;}
+.newBorder{ border:#666 solid 1px;}
+.boxborder{border:solid thin #CCC;}
+#container{ width:100%;}
+.more{ color:#E0000B; cursor:pointer; padding-left:2px;}
+/* 顶部导航区域 */
+.top{ width:100%; height:75px;}
+.top-title{ width:30%; height:75px; float:left; padding-left:3%;}
+.top-title-top{height:50px; line-height:50px; text-align:center; font-size:30px; letter-spacing:8px;}
+.top-title-bottom{height:25px; line-height:16px; text-align:center; font-size:14px; color:#FF0915; letter-spacing:1px;}
+.top-nav{width:70%; height:75px;  float:left;}
+.mynav li{ width:125px;; line-height:75px; text-align:center; }
+.mynav li a{ font-size:17px; height:71px; line-height:71px; text-align:center; display:inline-block; width:auto; min-width:80px;}
+.mynav li a:hover{ color:#DE0000; text-decoration:none; border-bottom:solid 3px #DE0000;}
+.myactive{color:#DE0000;  border-bottom:solid 3px #DE0000; }
+/*中间内容区域1*/
+.content1{ height:318px; width:80%; margin:15px auto; }
+.content1-left{ height:100%; width:220px;}
+.content1-middle{ height:100%; width:580px; margin:0 15px;}
+.content1-right{height:100%; width:230px;}
+.content1-title{ height:34px; line-height:34px; background-color:#E0000B; font-size:15px; color:#FFF; padding-left:10px;}
+.p-title{font-weight:900; font-size:14px; margin-bottom:3px;}
+.p-pag{ font-size:14px; padding-left:14px; margin-bottom:7px; margin-top:5px;}
+.p-content{ margin-top:8px; text-indent:2em; line-height:20px; font-size:13px;}
+.p-content1{ margin-top:8px; margin-left:10px; margin-right:10px; text-indent:2em; line-height:22px; font-size:13px;}
+.content2{ height:340px; width:80%; margin:15px auto;}
+.content2-right-content{ }
+.content2-right-content ul{}
+.content2-right-content ul li{ list-style-type:none; list-style-image:url(../images/li.gif); line-height:20px; font-size:13px; padding-left:0px; margin-left:0px;}
+.content3{ height:86px; width:1080px; margin:15px auto; background:url(../images/ads.gif) repeat-x 0 0;}
+.content4{ height:137px;  width:80%; margin:15px auto;}
+/*友情链接区域*/
+.friendlink{ width:80%; margin:0 auto; height:30px; line-height:30px; background-color:#C3C3C3;  color:#fff; }
+.friendlink span{ padding-left:10px; padding-right:10px;}
+.friendlink span a{  color:#fff;  cursor:pointer; text-decoration:underline; }
+.friendlink span a:hover{ color:#3399FF; }
+/*底部版权区域*/
+.copyright{ width:80%; margin:0 auto;  height:40px; line-height:40px;}
+.copyright1{ width:300px; display:inline-block;}
+.copyright2{width:400px; display:inline-block; text-align:center;}
+.copyright3{width:300px; display:inline-block; text-align:right;}
+
+/*选项卡区域*/
+#tab1{width:580px;height:33px; background-color:#DE0000;}
+#tab1 ul{margin:0;padding:0;}
+#tab1 li{float:left;padding:0 30px;height:33px;line-height:33px;text-align:center;cursor:pointer; font-size:14px; color:#fff;}
+#tab1 li.now{color:#DE0000;background:#fff;font-weight:bold; font-size:14px;}
+.tablist{width:580px;height:112px;padding:10px;font-size:14px;line-height:24px; display:none; text-indent:2em;}
+.block{display:block;}
+
+/*面试专区*/
+.top-title-top1{height:50px; line-height:50px; text-align:center; font-size:22px; letter-spacing:3px; padding-left:60px; background:url(../images/logo_01.gif) no-repeat; background-position: 21% 0;}
+.columns1{ height:35px; line-height:35px; width:80%; margin:15px auto; background-color:#C3C3C3; padding-left:8px;}
+.columns2{ height:auto; min-height:500px; width:80%; margin:15px auto; overflow:hidden;}
+.myspan{ padding:0 10px;}
+.columns2-left{ width:20%; margin-right:19px;}
+.newactive{ color:#F00;}
+.columns2-left div a{ height:50px; line-height:50px; font-size:14px; padding-left:20px; font-weight:900;} 
+.columns2-left div a:hover{color:#F00;}
+.border-no{ border-left:none; border-right:none; border-bottom:solid thin #CCC; border-top:solid thin #CCC;}
+.columns2-right{ width:78%; margin-bottom:20px;}
+.columns2-right-content{ padding:5px 10px 20px 10px; height:auto; min-height:500px; }
+.passage-title{ height:33px; line-height:33px; text-align:center; font-size:15px; font-weight:900; padding-top:5px; padding-bottom:8px; margin-bottom:8px;}
+/*
+.passage-content{ text-indent:2em; font-size:13px; }
+.columns2-right-content p{ margin:0; padding:0;}
+*/
+/*开设课程*/
+.course-contain{ height:auto;  width:80%; margin:15px auto;}
+.course-contain-title{ height:80px; line-height:80px; text-align:center; font-size:30px; background-color:#E0000B; color:#FFF;}
+.course-contain-table table{ width:90%; margin:0 auto;}
+caption{ font-size:16px; font-weight:bold; margin:15px 0;}
+th{ text-align:center;}
+/*权威师资*/
+.course-contain-main{ width:100%; margin:20px auto; height:auto; min-height:440px;}
+.course-contain-left{ margin-left:50px; margin-right:20px; margin-bottom:30px; width:450px; height:125px; overflow:hidden;}
+.course-contain-left  p{ padding-left:113px; margin-left:15px; }
+.teacher-name{ color:#E0000B; font-size:15px; font-weight:bold; margin:0; margin-bottom:5px; }
+.teacher-title{ font-size:14px; font-weight:bold; margin:0; margin-bottom:5px;}
+.teacher-details{ }
+
+/*办学优势*/
+.course-contain-content{ height:auto; min-height:350px; padding:20px;}
+
+
+/*艺术学校简介*/
+
+
+.top-title-art{width:32%; height:75px; float:left; padding-left:3%;}
+.top-title-top1-art{height:75px; line-height:75px; text-align:center; font-size:22px; letter-spacing:3px; padding-left:155px; background:url(../images/logo_01.gif) no-repeat; background-position: 35% 60%;}
+.myactive-art{background-color:#FF0; color:#666; -moz-border-radius:7px; -webkit-border-radius:7px;  border-radius:7px; }
+.top-nav-art{width:68%; height:75px;  float:left; padding-left:10%;  color:#666;}
+.mynav-art li{ width:125px; line-height:75px; text-align:center;  }
+.mynav-art li a{ font-size:17px; height:35px; line-height:35px; text-align:center; display:inline-block; width:auto; min-width:80px;}
+.mynav-art li a:hover{ text-decoration:none; background-color:#ff0; color:#666;-moz-border-radius:7px; -webkit-border-radius:7px;  border-radius:7px;}
+.course-contain-title-art{ height:80px; line-height:80px; text-align:center; font-size:30px; background-color:#007CC3;color:#FFF;}
+
+/*教师风采*/
+.content1-title-art{ height:34px; line-height:34px; background-color:#0075C0; font-size:15px; color:#FFF; padding-left:10px;}
+.newactive-art{ color:#0075C0;}
+.columns2-left-art{ width:20%; margin-right:19px;}
+.columns2-left-art div a{ height:50px; line-height:50px; font-size:14px; padding-left:20px; font-weight:900;} 
+.columns2-left-art div a:hover{color:#0075C0;}
+.border-no{ border-left:none; border-right:none; border-bottom:solid thin #CCC; border-top:solid thin #CCC;}
+.columns2-right{ width:78%; margin-bottom:20px;}
+/*教师风采*/
+.course-contain-left-art{ margin:10px 15px 20px 0px; width:380px; height:135px; overflow:hidden; }
+.teacher-name-art{ color:#0075C0; font-size:15px; font-weight:bold; margin:0; margin-bottom:5px;}
+/*艺术首页*/
+.content1-title-purple{height:34px; line-height:34px; background-color:#B31B7A; font-size:15px; color:#FFF; padding-left:10px;}
+.content2-right-content-art{ }
+.content2-right-content-art ul{ }
+.content2-right-content-art ul li{ list-style-type:none; list-style-image:url(../images/li.gif); line-height:20px; font-size:13px; padding-left:0px; margin-left:0px; letter-spacing:1px;}
+.content2-art{ height:250px; width:80%; margin:15px auto;}
+.content2-right-art{ width:76%; margin:15px; height:100%; margin-top:0;}
+.myimg{ padding-left:40px; padding-top:15px;}
+.myimg p{padding-top:5px; height:15px; line-height:15px; padding-left:30px;}
+.content2-right-course-art{ margin-left:20px;}
+.myimg-art{ height:215px; width:195px; padding:20px;  }
+.myimg-art p{ padding-top:10px; height:20px; line-height:20px; text-align:center;}
+
+/*12.10*/
+.content1-new{width:80%; margin:15px auto;}
+.container2-top{height:50px; line-height:50px; text-align:center; font-size:26px;}
+.myline{ display: inline-block; border-bottom:1px dashed #999999; height:25px; width:300px; }
+
+.container3-left{ height:100%; width:33%; }
+.container3-middle{ height:100%; width:33%; }
+.container3-right{height:100%; width:33%; }
+.container3-middle-title{width:100%; height:70px; font-size:20px; font-weight:bold; padding-left:20px; background:url(../images/span.png) no-repeat 90% 0px; border-top:8px solid #FF0; }
+.container3-middle ul li{ list-style-type:none; list-style-image:url(../images/li.gif); line-height:25px; font-size:13px; padding-left:0px; margin-left:0px; letter-spacing:1px;}
+.container3-right-title{width:100%; height:70px; font-size:20px; font-weight:bold;  padding-left:20px;  background:url(../images/span.png) no-repeat 90% 0px; border-top:8px solid #FF0;}
+.td-left{width:270px; height:30px; padding-left:25px; background:url(images/li.gif) no-repeat 3px 7px;}
+
+
+/*商演主页*/
+
+.top-title-show{width:33%; height:75px; float:left; padding-left:2%; color:#747474;}
+.top-title-top1-show{height:75px; font-size:22px; letter-spacing:5px; padding-left:185px; background:url(../images/logo_01.gif) no-repeat; background-position: 28% 20%;}
+.myactive-show{background-color:#00B4EE; color:#FFF; -moz-border-radius:7px; -webkit-border-radius:7px;  border-radius:7px; }
+.top-nav-show{width:66%; height:75px;  float:left; padding-left:10%; }
+.mynav-show ul{}
+.mynav-show li{width:125px; height:75px; line-height:75px; text-align:center; }
+.mynav-show li a{ display:inline-block; font-size:17px; height:35px; line-height:35px; text-align:center; width:auto; min-width:80px;}
+.mynav-show li a:hover{text-decoration:none; background-color:#00B4EE; color:#fff;-moz-border-radius:7px; -webkit-border-radius:7px;  border-radius:7px;}
+
+.container3-show-title{width:100%; height:40px; font-size:16px; font-weight:bold; line-height:40px; padding-left:5px; color:#00B4EE;}
+.newmore{display:inline-block; background-color:#00B4EE; font-size:13px; width:60px; height:30px; line-height:30px; text-align:center; color:#FFF; text-decoration:underline; margin-left:5px;}
+.container3-show-title1{width:100%; height:28px; line-height:28px; padding-left:10px; font-size:14px; font-weight:bold; background-color:#CCC;}
+
+/*商演培训*/
+.commercialimg{height:184px; width:1080px; margin:0 auto 20px auto; background-color:#999; background:url(../images/bg_03.gif) no-repeat 45px 0px;}
+.content1-title-show{height:66px; line-height:66px; background-color:#F6F6F6; font-size:20px; letter-spacing:1px; font-weight:bold; color:#1E577C; text-align:center;}
+.newactive-show{ color:#1E577C;}

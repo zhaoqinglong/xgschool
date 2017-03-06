@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="artSchool.master.cs" Inherits="XGSchool.artSchoolNew.artSchool" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>新革艺术学校</title>
+
+    <link href="../Skins/CSS/artStyle.css" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Skins/scripts/jquery.min.js"></script>
+    <style type="text/css">
+       
+    </style>
+      <script type="text/javascript">
+          function mynav3() { $("#nav3").css("background", "url(../Skins/artimages/nav_03_current.png) no-repeat"); }
+          function mynav3out() { $("#nav3").css("background", "url(../Skins/artimages/nav_03.png) no-repeat"); }
+
+          function mynav4in() { $("#nav4").css("background", "url(../Skins/artimages/nav_04_current.png) no-repeat"); }
+          function mynav4out() { $("#nav4").css("background", "url(../Skins/artimages/nav_04.png) no-repeat"); }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+        <div id="container">
+        <div class="top">&nbsp;</div>
+        <div>
+            <div class="banner ">
+                <a href="../index.aspx" style=" cursor:pointer;"><div class="banner1 myfloat "></div></a>
+                <div class="banner2 myfloat ">
+                    <span style="font-size:32px; height:100px; line-height:100px; text-align:center; color:#FEC300; font-style:italic; font-weight:bold; padding-left:35%;"><%=topPhone%></span>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="mynav">
+                <ul class="">
+                    <li ><a href="index.aspx" id="nav1" >&nbsp;</a></li>
+                    <li ><a href="about.aspx" id="nav2" >&nbsp;</a></li>
+                    <li ><a href="advantages.aspx" id="nav3" onmouseover="mynav3()" onmouseout="mynav3out()">&nbsp;</a>
+                    	<ul onmouseover="mynav3()" onmouseout="mynav3out()">
+                        	<li><a href="advantages.aspx?colsId=0">教学环境</a></li>
+                            <li><a href="advantages.aspx?colsId=1">师资团队</a></li>
+                            <li><a href="advantages.aspx?colsId=2">课堂氛围</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="lesson.aspx" id="nav4" onmouseover="mynav4in()" onmouseout="mynav4out()">&nbsp;</a>
+                    	<ul onmouseover="mynav4in()" onmouseout="mynav4out()">
+                        	<li><a href="lesson.aspx?colsId=0">编导类</a></li>
+                            <li><a href="lesson.aspx?colsId=1">播音类</a></li>
+                            <li><a href="lesson.aspx?colsId=2">表演类</a></li>
+                            <li><a href="lesson.aspx?colsId=3">美术类</a></li>
+                            <li><a href="lesson.aspx?colsId=4">声乐类</a></li>
+                            <li><a href="lesson.aspx?colsId=5">舞蹈类</a></li>
+                            <li><a href="lesson.aspx?colsId=6">空乘类</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="culture.aspx" id="nav5" >&nbsp;</a></li>
+                    <li ><a href="contact.aspx" id="nav6" >&nbsp;</a></li>
+                    <li ><a href="news.aspx" id="nav7" >&nbsp;</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+
+
+
+
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+
+            <div class="content3"><!--start of content3-->
+        	<div class="content3-con">
+            
+            	<div class="content3-con-left  myfloat" >
+                	<div class="friendlink ">友情链接:
+                        <%for (int i = 0; i < Links.Length; i++){%>
+                    <a href="<%=Links[i].LinkString%>" target="_blank"><%=Links[i].LinkName%></a>
+                    <% } %>
+                    </div>
+                    <p style="margin-top:15px;"><%=artcopyright %></p>
+           		</div>
+                
+           		<div class="content3-con-right  myfloat">
+                	<p style="margin-top:30px;">地址：<%=Address %></p>
+                    <p style="margin-top:15px;">电话：<%=artPhone %></p>
+                </div>
+                
+           </div>
+        </div><!--end of content3-->
+</div>
+</body>
+</html>

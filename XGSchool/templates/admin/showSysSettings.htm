@@ -1,0 +1,102 @@
+﻿#parse("Admin/Head.htm")
+<form method="post" action="showSysSettings.ashx" enctype="multipart/form-data" id="J-form-sub">
+    <input type="hidden" name="Save" value="保存">
+    <table align="center" class="table table-striped table-bordered">
+        <thead>
+            <tr><th width="150">相关栏目</th><th>内容</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>学院简介:</td>
+                <td>
+                    <textarea class="form-control validation " id="about" rows="3" name="about">$Data.about</textarea>
+                    <span class="lblMessage" style="color: Red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>普通话课程:</td>
+                <td>
+                    <textarea class="form-control validation " rows="3" id="biandao" name="biandao">$Data.biandao</textarea>
+                    <span class="lblMessage" style="color: Red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>商演主持&nbsp;& &nbsp;婚礼主持:</td>
+                <td>
+                    <textarea class="form-control validation " rows="3" id="boyin" name="boyin">$Data.boyin</textarea>
+                    <span class="lblMessage" style="color: Red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>商演培训顶部背景图片:</td>
+                <td>
+                    <input type="file" name="showImgsrc" />
+                    <img src="$Data.showImgsrc" alt="图像" width="320" height="120" />
+                </td>
+            </tr>
+            <tr><td colspan="2"><input type="button" name="Save1" value="保存" class="btn btn-success J-btn-sub" /></td></tr>
+        </tbody>
+    </table>
+</form>
+<script type="text/javascript">
+
+    var jQuery = jQuery.noConflict();
+
+    jQuery(".validation").blur(function () {
+        checkValueLegal(jQuery(this));
+    });
+
+    function checkValueLegal(obj) {
+        var success = true;
+        var id = obj.attr("id");
+        var val = jQuery.trim(obj.val());
+
+        obj.siblings(".lblMessage").html("");
+
+        if (id == "about" && jQuery("#about").val().trim().length >= 300) {
+            obj.siblings(".lblMessage").html("*长度需小于300个字符");
+            success = false;
+        }
+
+        if (id == "about" && jQuery("#about").val().trim().length <= 0) {
+            obj.siblings(".lblMessage").html("*不能为空");
+            success = false;
+        }
+
+        if (id == "biandao" && jQuery("#biandao").val().trim().length >= 300) {
+            obj.siblings(".lblMessage").html("*长度需小于300个字符");
+            success = false;
+        }
+
+        if (id == "biandao" && jQuery("#biandao").val().trim().length <= 0) {
+            obj.siblings(".lblMessage").html("*不能为空");
+            success = false;
+        }
+
+        if (id == "boyin" && jQuery("#boyin").val().trim().length >= 300) {
+            obj.siblings(".lblMessage").html("*长度需小于300个字符");
+            success = false;
+        }
+
+        if (id == "boyin" && jQuery("#boyin").val().trim().length <= 0) {
+            obj.siblings(".lblMessage").html("*不能为空");
+            success = false;
+        }
+        return success;
+    }
+
+    jQuery(".J-btn-sub").click(function () {
+        var count = 0;
+        jQuery(".validation").each(function (i) {
+            if (!checkValueLegal(jQuery(this))) {
+                count++;
+            }
+        });
+
+        if (count > 0) {
+            return false;
+        }
+        jQuery("#J-form-sub").submit();
+    });
+</script>
+#parse("Admin/Foot.htm")

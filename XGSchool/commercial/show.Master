@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="show.master.cs" Inherits="XGSchool.commercial.show" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>商演主持培训</title>
+    <link href="../Skins/CSS/bootstrap.min.css" rel="Stylesheet" />
+    <link href="../Skins/CSS/Style.css" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Skins/scripts/jquery.min.js"></script>
+          <script type="text/javascript">
+              function changeNewColsClass(obj) {
+                  $(".myactive-show").removeClass("myactive-show");
+                  $("#colnav" + obj + "").addClass("myactive-show");
+              }
+              function getQueryString(name) {
+                  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                  var r = window.location.search.substr(1).match(reg);
+                  if (r != null) return unescape(r[2]); return null;
+              }
+              $(document).ready(function () {
+                  var o = getQueryString("colsId");
+                  if (o != null && o <= 7 && o >= 1) {
+                      changeNewColsClass(o)
+                  } else {
+                      changeNewColsClass(1)
+                  }
+
+              })
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div id=" container">
+<div class="top-show ">
+    <div class="top-title-show">   
+        <a href="../index.aspx" style=" cursor:pointer;">
+            <div class="top-title-top1-show">
+        	    <p style="margin-bottom:0; margin-top:12px; ">新革商演主持培训</p>
+                <p style="color:#F49437; font-size:14px; letter-spacing:0; margin-top:0; ">重庆第一家权威商演主持培训基地</p>
+            </div>
+        </a>
+    </div>
+    <div class="top-nav-show">
+        <ul class="mynav-show">
+           <li><a href="showIndex.aspx?colsId=1" class="myactive-show" id="colnav1">&nbsp;首&nbsp;&nbsp;页&nbsp;</a></li>
+           <li><a href="commercialShow.aspx?colsId=2" id="colnav2">学院简介</a></li>
+           <li><a href="student.aspx?colsId=4" id="colnav4">学员风采</a></li>
+           <li><a href="showClasses.aspx?colsId=5" id="colnav5">课堂瞬间</a></li>
+           <li><a href="commercialShow.aspx?colsId=6" id="colnav6">商演培训</a></li>
+           <li><a href="commercialNews.aspx?colsId=7" id="colnav7">新革动态</a></li>
+
+        </ul>
+    </div>
+</div>
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+<div class="friendlink">
+<span>友情链接:</span>
+    <%for (int i = 0; i < Links.Length; i++){%>
+      <span><a href="<%=Links[i].LinkString%>"><%=Links[i].LinkName%></a></span>
+     <% } %>
+</div>
+<div class="copyright">
+    <span class="copyright1"><%=showcopyright %></span>
+    <span class="copyright2">地址：<%=showsiteAds %></span>
+    <span class="copyright3">咨询热线：<%=Phone1 %></span>
+</div>
+</div>
+</body>
+</html>
