@@ -5,12 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGSchool", "XGSchool\XGSchool.csproj", "{52FE6101-96E7-4F84-84A0-23E4EE71A9EC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{D867A495-7385-4015-9BCC-7209A4638D65}"
-	ProjectSection(SolutionItems) = preProject
-		..\db\XinGeSchool.mdf = ..\db\XinGeSchool.mdf
-		..\db\XinGeSchool_log.LDF = ..\db\XinGeSchool_log.LDF
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
